@@ -21,7 +21,7 @@ function App() {
 	var template = {
 		main:	'<div class="movie" x-movieId={id}>' +
 					'<div class="title">' +
-						'<div href="{torrent}" x-title="{title}" x-year="{year}">{title}</div>' +
+						'<a href="{torrent}" x-title="{title}" x-year="{year}">{title}</a>' +
 						'<i></i>' +
 					'</div>' +
 					'<div class="poster">' +
@@ -108,7 +108,7 @@ function App() {
 		$(content).on('click', '.title i', 
 			function() { 
 
-				var args = $(this).parent('.movie').attr('x-movieId');
+				var args = $(this).closest('.movie').attr('x-movieId');
 				getDetails( args ); 
 
 			});
@@ -117,7 +117,7 @@ function App() {
 		$(content).on('click', '.poster img', 
 			function() { 
 
-				var args = $(this).parent('.movie').attr('x-movieId');
+				var args = $(this).closest('.movie').attr('x-movieId');
 				getTrailerUrl( args ); 
 
 			});		
