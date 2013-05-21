@@ -41,14 +41,17 @@ header input:focus {
     flex-flow: row wrap;
     -webkit-flex-flow: row wrap;
     -moz-flex-flow: row wrap;
+    justify-content: space-around;
+    -webkit-justify-content: space-around;
+    -moz-justify-content: space-around;
 }
 
 .movie {
 	margin: 10px;
 
-	flex: 1 1 30%;
-	-webkit-flex: 1 1 30%;
-	-moz-flex: 1 1 30%;	
+	flex: 0 0 30%;
+	-webkit-flex: 0 0 30%;
+	-moz-flex: 0 0 30%;	
 }
 
 .title {
@@ -90,7 +93,7 @@ header input:focus {
 
 .title i { 
 	background: transparent url('../images/info.png') center center no-repeat;
-	background-size: auto 100%;
+	background-size: 32px 32px;
 	cursor: pointer;
 
 	flex: 2;
