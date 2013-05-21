@@ -21,7 +21,7 @@ function App() {
 	var template = {
 		main:	'<div class="movie" x-movieId={id}>' +
 					'<div class="title">' +
-						'<a href="" x-title="{title}" x-year="{year}">{title}</a>' +
+						'<a x-title="{title}" x-year="{year}">{title}</a>' +
 						'<i></i>' +
 					'</div>' +
 					'<div class="poster">' +
@@ -101,6 +101,7 @@ function App() {
 					year : $(this).attr('x-year')
 				}
 				getMagnetLink( args );
+				return false;
 
 			});
 
