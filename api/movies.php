@@ -3,7 +3,7 @@
 echo findMovies();
 
 /** Find Movies **/
-function findMovies($url) 
+function findMovies() 
 {
 	// api key
 	$APIKEY = "caq7d55yqy2cca3szz7gdzkk";
