@@ -21,69 +21,7 @@
 	
 	<!-- Main -->
 	<div id="wrapper">
-		<div id="content">
-
-			<div class="movie">
-				<div class="title">
-					<a href="" x-title="{title}" x-year="{year}">{title}</a>
-					<i></i>
-				</div>
-				<div class="poster">
-					<img src="images/test.jpg" id="{links.clips}"></img>
-				</div>
-			</div>
-
-			<div class="movie">
-				<div class="title">
-					<a href="" x-title="{title}" x-year="{year}">{title}</a>
-					<i></i>
-				</div>
-				<div class="poster">
-					<img src="{posters.detailed}" x-trailerRef="{links.clips}"></img>
-				</div>
-			</div>
-
-			<div class="movie">
-				<div class="title">
-					<a href="" x-title="{title}" x-year="{year}">{title}</a>
-					<i></i>
-				</div>
-				<div class="poster">
-					<img src="{posters.detailed}" x-trailerRef="{links.clips}"></img>
-				</div>
-			</div>
-
-			<div class="movie">
-				<div class="title">
-					<a href="" x-title="{title}" x-year="{year}">{title}</a>
-					<i></i>
-				</div>
-				<div class="poster">
-					<img src="{posters.detailed}" x-trailerRef="{links.clips}"></img>
-				</div>
-			</div>
-
-			<div class="movie">
-				<div class="title">
-					<a href="" x-title="{title}" x-year="{year}">{title}</a>
-					<i></i>
-				</div>
-				<div class="poster">
-					<img src="{posters.detailed}" x-trailerRef="{links.clips}"></img>
-				</div>
-			</div>
-
-			<div class="movie">
-				<div class="title">
-					<a href="" x-title="{title}" x-year="{year}">{title}</a>
-					<i></i>
-				</div>
-				<div class="poster">
-					<img src="{posters.detailed}" x-trailerRef="{links.clips}"></img>
-				</div>
-			</div>
-
-		</div>
+		<div id="content"></div>
 	</div>
 	
 	<!-- Javascript -->
