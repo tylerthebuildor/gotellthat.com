@@ -20,7 +20,7 @@ function findMovieDetails()
 	$data = json_decode(file_get_contents($url), true);
 	
 	// convert array to JSON & return
-	return json_encode($data['movies']);
+	return json_encode($data);
 
 }
 

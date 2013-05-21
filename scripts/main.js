@@ -193,7 +193,7 @@ function App() {
 	// Get Details
 	var getDetails = function(movieId) {
 
-		$.get(API_URL.DETAILS + movieId, function(data) {
+		$.getJSON(API_URL.DETAILS + movieId, function(data) {
 			displayDetails(data);
 		})
 		.fail(function() {
