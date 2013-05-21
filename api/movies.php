@@ -18,7 +18,7 @@ function findMovies($url)
 	}
 	else 
 	{
-		$url = 'http://api.rottentomatoes.com/api/public/v1.0/lists/dvds/new_releases.json?apikey='.$APIKEY
+		$url = 'http://api.rottentomatoes.com/api/public/v1.0/lists/dvds/new_releases.json?apikey='.$APIKEY;
 	}
 
 	// request and decode json api data
