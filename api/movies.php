@@ -1,33 +1,35 @@
 <?php
 
-if(isset($_GET['q']))
-	echo findMoviesInfo();
-else 
-	echo findMoviesInfo('http://api.rottentomatoes.com/api/public/v1.0/lists/dvds/new_releases.json?apikey='.$APIKEY);
+echo findMovies();
 
-/** Find Movies Info **/
-function findMoviesInfo($url) 
+/** Find Movies **/
+function findMovies($url) 
 {
-	//api key
+	// api key
 	$APIKEY = "caq7d55yqy2cca3szz7gdzkk";
 
-	//create rotten tomatoes api request url
-	if (!$url) {
+	// create rotten tomatoes api request url
+	if ( isset($_GET['q']) ) 
+	{
 		$url = 'http://api.rottentomatoes.com/api/public/v1.0/movies.json?apikey='.$APIKEY.
 		'&q='.urlencode($_GET['q']).
 		'&page_limit='.intval($_GET['page_limit']).
 		'&page='.intval($_GET['page']);
 	}
+	else 
+	{
+		$url = 'http://api.rottentomatoes.com/api/public/v1.0/lists/dvds/new_releases.json?apikey='.$APIKEY
+	}
 
-	//request and decode json api data
+	// request and decode json api data
 	$data = json_decode(file_get_contents($url), true);
 	
-	//return null if no results
+	// return null if no results
 	$countMovies = count($data['movies']);
 	if($countMovies === 0)
 		return null;
 	
-	//convert array to JSON & return
+	// convert array to JSON & return
 	return json_encode($data['movies']);
 
 }

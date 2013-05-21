@@ -142,8 +142,10 @@ function App() {
 			url = url +
 			'?q=' + searchWord +
 			'&page=' + page +
-			'&page_limit=' + PAGE_LIMIT
+			'&page_limit=' + PAGE_LIMIT;
 		}
+
+		console.log(url);
 		
 		$.getJSON(url, function(data) {
 			(data) ? displayMovies(data) : throwError(3);
@@ -156,10 +158,10 @@ function App() {
 
 	// Dispaly Movies
 	var displayMovies = function(movies) {	
-		console.log(data);
+		console.log(movies);
 		page++;
 		
-		$(data).each(function(index, value) {
+		$(movies).each(function(index, value) {
 
 			el.content.innerHTML += template.main.present(value);
 
