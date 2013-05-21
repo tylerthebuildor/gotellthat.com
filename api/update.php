@@ -4,7 +4,7 @@
 
 
 //connect to db
-$db = new PDO('sqlite:newreleases.sqlite3');
+$db = new SQLite3('cache');
 
 //loop results
 $count = count();

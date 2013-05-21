@@ -1,30 +1,35 @@
 <?php
 /** Pre-reqs **/
-if(!isset($_GET['url'])) exit;
+if(!isset($_GET['movieId'])) exit;
 require_once("simple_html_dom.php");
 $APIKEY = "caq7d55yqy2cca3szz7gdzkk";
 echo findMovieTrailer();
 
 /** Find Trailer URL **/
-function findMovieTrailer() {
+function findMovieTrailer() 
+{
 	//globals
 	global $APIKEY;
 	
-	//create rotten tomatoes trailer-api request url
-	$trailerAPIURL = $_GET['url'].'?apikey='.$APIKEY;
+	//create rotten tomatoes trailer-ref request url
+	$trailerRef = "http://api.rottentomatoes.com/api/public/v1.0/movies/".
+	intval($_GET['movieId']).
+	'/clips.json?apikey='.$APIKEY;
 	
 	//find & return swf url
-	$trailerURL = scrapeRottenTomatoes($trailerAPIURL);
-	unset($trailerAPIURL);
-	return $trailerURL;
+	$trailerUrl = scrapeRottenTomatoes($trailerRef);
+	unset($trailerRef);
+	return $trailerUrl;
 }
 
 /** Scrape Trailer SWF URL **/
-function scrapeRottenTomatoes($trailerAPIURL) 
+function scrapeRottenTomatoes($trailerRef) 
 {		
-	//request trailer-api json data and decode
-	$trailerData = json_decode(file_get_contents($trailerAPIURL), true);
-	unset($trailerAPIURL);
+	//request trailer-ref json data and decode
+	$trailerData = json_decode(file_get_contents($trailerRef), true);
+	unset($trailerRef);
+	if (!$trailerData) 
+		return null;	
 	
 	//parse url
 	$mobileURL = str_replace('/m', '/mobile/m', $trailerData['links']['alternate']);
@@ -34,7 +39,6 @@ function scrapeRottenTomatoes($trailerAPIURL)
 	$html = new simple_html_dom();
 	$html->load_file($mobileURL);
 	unset($trailerData, $mobileURL);
-	//($trailerData['clips'][0]['links']['alternate']
 	
 	//find trailer button
 	$a = $html->find('.trailerbutton', 0);
