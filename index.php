@@ -17,7 +17,7 @@
 	
 	<!-- Header -->
 	<header>
-		<input type="text" id="search" />
+		<input type="text" />
 		<div class="tour">tour</div>
 	</header>
 	

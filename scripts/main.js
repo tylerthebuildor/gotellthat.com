@@ -79,7 +79,7 @@ function App() {
 	// Elements
 	var el = {
 
-		$search: $('#search'),
+		$search: $('.search-box input'),
 		details: document.getElementById('details'),
 		content: document.getElementById('content')
 
@@ -309,10 +309,9 @@ String.prototype.present = function(o) {
 // Tour
 $('.tour').on('click', function() {
 
-    $tour = $(this);
     var data = [
         {
-            el: '#search',
+            el: 'header input',
             msg: "This is where you can search for movies. Hit enter to submit your query. " +
         		 "Submitting a blank query will show new releases."
         },
