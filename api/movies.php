@@ -6,7 +6,7 @@ echo findMovies();
 function findMovies() 
 {
 	// api key
-	$APIKEY = file_get_contents('.apikey');
+	$APIKEY = trim(file_get_contents('.apikey'));
 
 	// create rotten tomatoes api request url
 	if ( isset($_GET['q']) ) 
@@ -20,6 +20,7 @@ function findMovies()
 	{
 		$url = 'http://api.rottentomatoes.com/api/public/v1.0/lists/dvds/new_releases.json?apikey='.$APIKEY;
 	}
+	echo $url;
 
 	// request and decode json api data
 	$data = json_decode(file_get_contents($url), true);

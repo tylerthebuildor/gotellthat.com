@@ -10,8 +10,8 @@ if( isset($_GET['movieId']) )
 /** Find Trailer URL **/
 function findMovieTrailer() 
 {
-	// globals
-	$APIKEY = file_get_contents('.apikey');
+	// api key
+	$APIKEY = trim(file_get_contents('.apikey'));
 	
 	// create rotten tomatoes trailer-ref request url
 	$trailerRef = "http://api.rottentomatoes.com/api/public/v1.0/movies/".
