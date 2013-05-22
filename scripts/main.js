@@ -296,22 +296,23 @@ $('.tour').on('click', function() {
         		 "Submitting a blank query will show new releases."
         },
         {
-        	el: '.movie .title',
+        	el: '.movie a:first',
         	msg: "Click the title and we'll fetch the best torrent we can find for this movie."
         },
         {
-        	el: '.movie i',
+        	el: '.movie i:first',
         	msg: "Select the info icon to display a nice spread of information for this movie."
         },
         {
-        	el: '.poster img',
-        	msg: "Clicking the movie poster we'll this movies trailer."
+        	el: '.poster img:first',
+        	msg: "Clicking the movie poster will play this movies trailer."
         }
     ];
 
     $(data).each(function(index, value) {
-        $(value.el).attr('data-intro', value.msg);
-        $(value.el).attr('data-step', index + 1);
+    	$el = $(value.el);
+        $el.attr('data-intro', value.msg);
+        $el.attr('data-step', index + 1);
     });
 
     introJs().start();
