@@ -26,6 +26,7 @@ function App() {
 	};
 	var PAGE_LIMIT = 3;
 	var page = 1;
+	var noMoreResults = true;
 	var template = {
 		movie:	'<div class="movie" x-movieId={id}>' +
 					'<div class="title">' +
@@ -89,6 +90,7 @@ function App() {
 			if(event.which === 13) {
 
 				page = 1;
+				noMoreResults = false;
 				el.content.innerHTML = '';
 				getMovies(this.value);
 
@@ -140,7 +142,10 @@ function App() {
 		$(window).scroll(function() {
 
 			if (document.body.offsetHeight + document.body.scrollTop >= document.body.scrollHeight) {
-				//getMovies();
+
+				if (!noMoreResults)
+					getMovies();
+
 				console.log('bottom reached: ' + new Date());
 			}
 
@@ -160,7 +165,12 @@ function App() {
 		}
 		
 		$.getJSON(url, function(data) {
-			(data) ? displayMovies(data) : throwError(3);
+			if (data) { 
+				displayMovies(data) 
+			} else {
+				noMoreResults = true;
+				throwError(3);
+			}
 		})
 		.fail(function() {
 			throwError(1);
