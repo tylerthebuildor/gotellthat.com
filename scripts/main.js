@@ -143,8 +143,8 @@ function App() {
 
 			if (document.body.offsetHeight + document.body.scrollTop >= document.body.scrollHeight) {
 
-				if (!noMoreResults)
-					getMovies();
+				//if (!noMoreResults)
+				//	getMovies();
 
 				console.log('bottom reached: ' + new Date());
 			}
