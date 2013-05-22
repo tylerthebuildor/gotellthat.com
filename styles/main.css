@@ -8,7 +8,33 @@ body {
 }
 
 #details {
+	background-color: #f5f5f5;
 	display: none;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;	
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+}
+
+#details .container {
+	margin: 20px auto;
+	max-width: 500px;
+}
+
+#details h2 {
+	cursor: pointer;
+}
+
+#details h2:first-letter {
+	color: #999;
+}
+
+#details h2, #details h3, #details p {
+
+	padding: 0 10px;
 }
 
 header {

@@ -19,7 +19,7 @@ function App() {
 	var PAGE_LIMIT = 3;
 	var page = 1;
 	var template = {
-		main:	'<div class="movie" x-movieId={id}>' +
+		movie:	'<div class="movie" x-movieId={id}>' +
 					'<div class="title">' +
 						'<a x-title="{title}" x-year="{year}">{title}</a>' +
 						'<i></i>' +
@@ -29,39 +29,35 @@ function App() {
 					'</div>' +	
 				'</div>',
 					
-		info: 	'<h2><span style="color:#999">X</span>{title}</h2>'+
-				'<div id="synopsis">'+
+		details:'<div class="container">' +
+					'<h2>X {title}</h2>'+
+
 					'<h3>Synopsis</h3>' +
 					'<p>{synopsis}</p>' +
-				'</div>' +
-				'<div id="consensus">' +
+
 					'<h3>Critics Consensus</h3>' +
 					'<p>{critics_consensus}</p>' +
-				'</div>' +
-				'<div id="abridged_cast">' +
-					'<h3>Actors</h3>' +
-				'</div>'+
-				'<div id="ratings">' +
+
+					'<div id="abridged_cast">' +
+						'<h3>Actors</h3>' +
+					'</div>'+
+
 					'<h3>Ratings</h3>' +
 					'<p>Audience: "{ratings.audience_rating}" {ratings.audience_score}/100</p>' +
 					'<p>Critics: "{ratings.critics_rating}" {ratings.critics_score}/100</p>' +
-				'</div>' +
-				'<div id="runtime">' +
+
 					'<h3>Runtime</h3>' +
 					'<p>{runtime} minutes</p>' +
-				'</div>'+
-				'<div id="release_dates">' +
+
 					'<h3>Release Dates</h3>' +
 					'<p>Theater: {release_dates.theater}</p>' +
 					'<p>DVD: {release_dates.dvd}</p>' +
-				'</div>' +
-				'<div id="mpaa_rating">' +
+
 					'<h3>MPAA Rating</h3>' +
 					'<p>{mpaa_rating}</p>' +
-				'</div>'+
-				'<div id="links">' +
+
 					'<h3>Link</h3>' +
-					'<a href="{links.alternate}" target="_new">Rotten Tomatoes Page</a>' +
+					'<p><a href="{links.alternate}" target="_new">Rotten Tomatoes Page</a></p>' +
 				'</div>',
 			
 		abridged_cast: '<p>{name}</p>'
@@ -110,7 +106,17 @@ function App() {
 			function() { 
 
 				var args = $(this).closest('.movie').attr('x-movieId');
-				getDetails( args ); 
+				getDetails( args );
+				document.body.style.overflow = 'hidden';				
+
+			});
+
+		// Hide Details
+		$(details).on('click', 'h2', 
+			function() {
+
+				el.details.style.display = 'none';
+				document.body.style.overflow = 'auto';
 
 			});
 
@@ -145,8 +151,6 @@ function App() {
 			'&page=' + page +
 			'&page_limit=' + PAGE_LIMIT;
 		}
-
-		console.log(url);
 		
 		$.getJSON(url, function(data) {
 			(data) ? displayMovies(data) : throwError(3);
@@ -159,12 +163,11 @@ function App() {
 
 	// Dispaly Movies
 	var displayMovies = function(movies) {	
-		console.log(movies);
 		page++;
 		
 		$(movies).each(function(index, value) {
 
-			el.content.innerHTML += template.main.present(value);
+			el.content.innerHTML += template.movie.present(value);
 
 		});
 
@@ -205,7 +208,13 @@ function App() {
 	// Display Details
 	var displayDetails = function(details) {
 
-		el.details.innerHTML = details;
+		el.details.innerHTML = template.details.present(details);
+		el.details.style.display = 'inline';
+
+		var abridged_cast = document.getElementById('abridged_cast');
+		$(details.abridged_cast).each(function(index, value){
+			abridged_cast.innerHTML += "<p>{name}</p>".present(value);
+		});
 
 	};
 
