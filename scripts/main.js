@@ -24,7 +24,7 @@ function App() {
 		DETAILS: 'http://'+ROOT_URL+'/api/details.php?movieId=',
 		TRAILER: 'http://'+ROOT_URL+'/api/trailer.php?movieId='
 	};
-	var PAGE_LIMIT = 3;
+	var PAGE_LIMIT = 9;
 	var page = 1;
 	var searchWord = '';
 	var moreResults = {
