@@ -79,7 +79,7 @@ function App() {
 	// Elements
 	var el = {
 
-		$search: $('.search-box input'),
+		$search: $('header input'),
 		details: document.getElementById('details'),
 		content: document.getElementById('content')
 
