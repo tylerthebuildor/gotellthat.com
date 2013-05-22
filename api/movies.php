@@ -7,7 +7,6 @@ function findMovies()
 {
 	// api key
 	$APIKEY = file_get_contents('.apikey');
-	echo $APIKEY;
 
 	// create rotten tomatoes api request url
 	if ( isset($_GET['q']) ) 
