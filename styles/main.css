@@ -107,24 +107,24 @@ header input:focus {
 .title a {
 	color: #444 !important;
 	cursor: pointer;
-	font-size: 1.5rem; 
+	font-size: 1.25rem; 
 	font-weight: bold;	
 	text-align: center;
 	text-decoration: none;	
 	
-	flex: 8;
-	-webkit-flex: 8;
-	-moz-flex: 8;
+	flex: 9;
+	-webkit-flex: 9;
+	-moz-flex: 9;
 }
 
 .title i { 
 	background: transparent url('../images/info.png') center center no-repeat;
-	background-size: 32px 32px;
+	background-size: 24px;
 	cursor: pointer;
 
-	flex: 2;
-	-webkit-flex: 2;
-	-moz-flex: 2;	
+	flex: 1;
+	-webkit-flex: 1;
+	-moz-flex: 1;	
 }
 
 .poster { 

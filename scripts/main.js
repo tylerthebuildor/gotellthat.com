@@ -106,8 +106,7 @@ function App() {
 			function() { 
 
 				var args = $(this).closest('.movie').attr('x-movieId');
-				getDetails( args );
-				document.body.style.overflow = 'hidden';				
+				getDetails( args );				
 
 			});
 
@@ -210,9 +209,10 @@ function App() {
 
 		el.details.innerHTML = template.details.present(details);
 		el.details.style.display = 'inline';
+		document.body.style.overflow = 'hidden';
 
 		var abridged_cast = document.getElementById('abridged_cast');
-		
+
 		$(details.abridged_cast).each(function(index, value){
 			abridged_cast.innerHTML += template.abridged_cast.present(value);
 		});
@@ -226,7 +226,7 @@ function App() {
 			playTrailer(trailerUrl);
 		})
 		.fail(function() {
-			throwError(1);
+			throwError(2);
 		});
 
 	};
