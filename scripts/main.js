@@ -179,11 +179,12 @@ function App() {
 				displayMovies(data) 
 			} else {
 				moreResults.noMore = true;
-				throwError(3);
+				throwError(3, true);
 			}
 		})
 		.fail(function() {
-			throwError(1);
+			moreResults.noMore = true;
+			throwError(1, true);
 		});
 
 	};
@@ -227,7 +228,7 @@ function App() {
 			displayDetails(data);
 		})
 		.fail(function() {
-			throwError(2);
+			throwError(2, true);
 		});
 		
 	};
@@ -279,7 +280,7 @@ function App() {
 				msg = "Sorry, couldn't find a trailer for this movie";
 				break;
 			case(3):
-				msg = "No matches found";
+				msg = "No more results";
 				break;
 		}
 
