@@ -137,3 +137,44 @@ header input:focus {
 	cursor: pointer; 
 	padding: 2px;  	
 }
+
+.tooltip {
+	padding: 10px 20px;
+	position: absolute;
+	font-family: sans-serif;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	font-size: 12px;
+	box-sizing: border-box;
+	background-color: rgba(0, 0, 0, 0.701961);
+	color: rgb(255, 255, 255);
+	top: 51px;
+	left: 556px;
+	display: block;
+}
+
+.tour {
+	background: #1563ca none;
+	background: none, -webkit-gradient(linear, left top, left bottom, from(#229fe0), to(#1563ca));
+	background: none, -webkit-linear-gradient(#229fe0, #1563ca);
+	background: none, -moz-linear-gradient(#229fe0, #1563ca);
+	background: none, -o-linear-gradient(top, #229fe0, #1563ca);
+	background: none, -khtml-gradient(linear, left top, left bottom, from(#229fe0), to(#1563ca));
+	color: #eeeeee;
+	cursor: pointer;
+	font-size: 1.25rem;
+	width: 20%;
+	max-width: 100px;
+	height: 30px;
+	float: right;
+}
+
+.tour:hover {
+	background: #1563ca;
+}
+
+.tour:active {
+	background: #229fe0;
+}

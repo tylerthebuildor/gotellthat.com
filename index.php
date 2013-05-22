@@ -7,7 +7,8 @@
 	<title>Go Tell That</title>
 	<link rel="icon" href="images/favicon.ico" type="image/png" />
 	<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="styles/main.css" type="text/css" media="screen" />	
+	<link rel="stylesheet" href="styles/introjs.min.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="styles/main.css" type="text/css" media="screen" />
 </head>
 <body>
 
@@ -17,6 +18,7 @@
 	<!-- Header -->
 	<header>
 		<input type="text" id="search" />
+		<div class="tour">tour</div>
 	</header>
 	
 	<!-- Main -->
@@ -26,7 +28,7 @@
 	
 	<!-- Javascript -->
 	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>	
-	<script src="scripts/handlebars.js" type="text/javascript"></script>
+	<script src="scripts/intro.min.js" type="text/javascript"></script>
 	<script src="scripts/main.js" type="text/javascript"></script>
 	<script type="text/javascript">
 	var _gaq = _gaq || [];
