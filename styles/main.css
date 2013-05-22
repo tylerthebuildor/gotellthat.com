@@ -73,11 +73,9 @@ header input:focus {
 }
 
 .movie {
-	margin: 10px;
-
-	flex: 0 0 30%;
-	-webkit-flex: 0 0 30%;
-	-moz-flex: 0 0 30%;	
+	flex: 0 0 256px;
+	-webkit-flex: 0 0 256px;
+	-moz-flex: 0 0 256px;	
 }
 
 .title {
@@ -119,7 +117,7 @@ header input:focus {
 
 .title i { 
 	background: transparent url('../images/info.png') center center no-repeat;
-	background-size: 24px;
+	background-size: contain;
 	cursor: pointer;
 
 	flex: 1;
