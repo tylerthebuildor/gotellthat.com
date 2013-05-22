@@ -1,5 +1,6 @@
 <?php
 
+/** Init **/
 if ( isset($_GET['movieId']) ) 
 {
 	echo findMovieDetails();
@@ -9,7 +10,7 @@ if ( isset($_GET['movieId']) )
 function findMovieDetails() 
 {
 	// api key
-	$APIKEY = "caq7d55yqy2cca3szz7gdzkk";
+	$APIKEY = file_get_contents('.apikey');
 
 	// create rotten tomatoes api request url
 	$url = 'http://api.rottentomatoes.com/api/public/v1.0/movies/'.

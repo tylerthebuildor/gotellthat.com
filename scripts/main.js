@@ -212,8 +212,9 @@ function App() {
 		el.details.style.display = 'inline';
 
 		var abridged_cast = document.getElementById('abridged_cast');
+		
 		$(details.abridged_cast).each(function(index, value){
-			abridged_cast.innerHTML += "<p>{name}</p>".present(value);
+			abridged_cast.innerHTML += template.abridged_cast.present(value);
 		});
 
 	};
