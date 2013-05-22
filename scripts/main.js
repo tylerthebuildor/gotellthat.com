@@ -26,7 +26,11 @@ function App() {
 	};
 	var PAGE_LIMIT = 3;
 	var page = 1;
-	var noMoreResults = true;
+	var searchWord = '';
+	var moreResults = {
+		inProgress: false,
+		noMore: false
+	};
 	var template = {
 		movie:	'<div class="movie" x-movieId={id}>' +
 					'<div class="title">' +
@@ -90,9 +94,11 @@ function App() {
 			if(event.which === 13) {
 
 				page = 1;
-				noMoreResults = false;
+				moreResults.inProgress = false;
+				moreResults.noMore = false;
+				searchWord = this.value;
 				el.content.innerHTML = '';
-				getMovies(this.value);
+				getMovies();
 
 			}
 
@@ -143,8 +149,10 @@ function App() {
 
 			if (document.body.offsetHeight + document.body.scrollTop >= document.body.scrollHeight) {
 
-				//if (!noMoreResults)
-				//	getMovies();
+				if (moreResults.noMore == false && moreResults.inProgress == false && searchWord) {
+					moreResults.inProgress = true;
+					getMovies();
+				}
 
 				console.log('bottom reached: ' + new Date());
 			}
@@ -154,7 +162,7 @@ function App() {
 	};
 
 	// Get Movies
-	var getMovies = function(searchWord) {
+	var getMovies = function() {
 		var url = API_URL.MOVIES;
 
 		if (searchWord) {
@@ -165,10 +173,12 @@ function App() {
 		}
 		
 		$.getJSON(url, function(data) {
-			if (data) { 
+			moreResults.inProgress = false;
+
+			if (data) {				
 				displayMovies(data) 
 			} else {
-				noMoreResults = true;
+				moreResults.noMore = true;
 				throwError(3);
 			}
 		})
