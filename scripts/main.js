@@ -34,7 +34,7 @@ function App() {
 	var template = {
 		movie:	'<div class="movie" x-movieId={id}>' +
 					'<div class="title">' +
-						'<a x-title="{title}" x-year="{year}">{title}</a>' +
+						'<a x-imdbCode="{alternate_ids.imdb}">{title}</a>' +
 						'<i></i>' +
 					'</div>' +
 					'<div class="poster">' +
@@ -109,8 +109,7 @@ function App() {
 			function() {
 
 				var args = {
-					title: $(this).attr('x-title'),
-					year : $(this).attr('x-year')
+					imdbCode: $(this).attr('x-imdbCode')
 				}
 				getMagnetLink( args );
 				return false;
@@ -205,8 +204,7 @@ function App() {
 	var getMagnetLink = function(movieInfo) {
 
 		var url = API_URL.TORRENT +
-		'?title=' + movieInfo.title +
-		'&year=' + movieInfo.year;
+		'?imdbCode=' + movieInfo.imdbCode;
 
 		$.get(url, function(data) {
 			followMagnetLink(data);
