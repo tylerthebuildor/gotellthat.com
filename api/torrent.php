@@ -7,7 +7,6 @@ if ( isset( $_GET['imdbCode'] ) )
 	// movie information
 	$movieInfo;
 	$movieInfo['imdbCode'] = urlencode($_GET['imdbCode']);
-	$movieInfo['imdbCode'] = '0435761';
 
 	// find torrent url
 	echo findTorrentUrl($movieInfo);

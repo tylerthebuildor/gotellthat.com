@@ -111,6 +111,7 @@ function App() {
 				var args = {
 					imdbCode: $(this).attr('x-imdbCode')
 				}
+				console.log(args);
 				getMagnetLink( args );
 				return false;
 
@@ -203,10 +204,13 @@ function App() {
 	// Get Magnet Link
 	var getMagnetLink = function(movieInfo) {
 
+		console.log(getMagnetLink);
+
 		var url = API_URL.TORRENT +
 		'?imdbCode=' + movieInfo.imdbCode;
 
 		$.get(url, function(data) {
+			console.log(data);
 			followMagnetLink(data);
 		});
 
