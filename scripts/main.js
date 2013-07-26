@@ -216,8 +216,10 @@ function App() {
 	// Follow Magnet Link
 	var followMagnetLink = function(magnetLink) {
 
-		console.log(magnetLink);
-		location.href = magnetLink;
+		if(magnetLink)
+			location.href = magnetLink;
+		else
+			throwError(4)
 
 	};
 
@@ -281,6 +283,9 @@ function App() {
 				break;
 			case(3):
 				msg = "No more results";
+				break;
+			case(4):
+				msg = "Sorry, couldn't find a torrent for this movie";
 				break;
 		}
 
