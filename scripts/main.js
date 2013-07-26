@@ -216,6 +216,7 @@ function App() {
 	// Follow Magnet Link
 	var followMagnetLink = function(magnetLink) {
 
+		console.log(magnetLink);
 		location.href = magnetLink;
 
 	};
