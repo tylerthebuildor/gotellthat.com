@@ -221,11 +221,9 @@ function App() {
 		$.get(url, function(data) {
 			if(!data && movieInfo.imdbCode) {
 				movieInfo.imdbCode = '{alternate_ids.imdb}';
-				console.log('1');
 				getMagnetLink(movieInfo);
 			}
 			else {
-				console.log('2')
 				followMagnetLink(data);
 			}
 
