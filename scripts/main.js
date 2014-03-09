@@ -159,7 +159,7 @@ function App() {
 					getMovies();
 				}
 
-				console.log('bottom reached: ' + new Date());
+				//console.log('bottom reached: ' + new Date());
 			}
 
 		});
@@ -168,7 +168,7 @@ function App() {
 
 	// Get Movies
 	var getMovies = function() {
-		var url = API_URL.MOVIES.YIFY;
+		var url = API_URL.MOVIES;
 
 		if (searchWord) {
 			url = url +
@@ -208,8 +208,8 @@ function App() {
 
 	// Get Magnet Link
 	var getMagnetLink = function(movieInfo) {
-
-		if(movieInfo.imdbCode) {
+		console.log(movieInfo);
+		if(movieInfo.imdbCode != '{alternate_ids.imdb}') {
 			var url = API_URL.TORRENT.YIFY +
 			'?imdbCode=' + movieInfo.imdbCode;
 		} else {
