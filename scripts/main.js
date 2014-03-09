@@ -208,7 +208,7 @@ function App() {
 
 	// Get Magnet Link
 	var getMagnetLink = function(movieInfo) {
-		console.log(movieInfo);
+
 		if(movieInfo.imdbCode != '{alternate_ids.imdb}') {
 			var url = API_URL.TORRENT.YIFY +
 			'?imdbCode=' + movieInfo.imdbCode;
