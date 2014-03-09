@@ -20,7 +20,10 @@ function App() {
 	var ROOT_URL = 'gotellthat.com'; //change this to your own url
 	var API_URL = {
 		MOVIES: 'http://'+ROOT_URL+'/api/movies.php',
-		TORRENT: 'http://'+ROOT_URL+'/api/torrent.php',
+		TORRENT: {
+			YIFY: 'http://'+ROOT_URL+'/api/torrent-yify.php',
+			FENOPY: 'http://'+ROOT_URL+'/api/torrent-fenopy.php'
+		},
 		DETAILS: 'http://'+ROOT_URL+'/api/details.php?movieId=',
 		TRAILER: 'http://'+ROOT_URL+'/api/trailer.php?movieId='
 	};
@@ -34,14 +37,14 @@ function App() {
 	var template = {
 		movie:	'<div class="movie" x-movieId={id}>' +
 					'<div class="title">' +
-						'<a x-imdbCode="{alternate_ids.imdb}">{title}</a>' +
+						'<a x-imdbCode="{alternate_ids.imdb}" x-title="{title}" x-year="{year}">{title}</a>' +
 						'<i></i>' +
 					'</div>' +
 					'<div class="poster">' +
 						'<img src="{posters.detailed}"></img>' +
-					'</div>' +	
+					'</div>' +
 				'</div>',
-					
+
 		details:'<div class="container">' +
 					'<h2>X {title}</h2>'+
 
@@ -72,7 +75,7 @@ function App() {
 					'<h3>Link</h3>' +
 					'<p><a href="{links.alternate}" target="_new">Rotten Tomatoes Page</a></p>' +
 				'</div>',
-			
+
 		abridged_cast: '<p>{name}</p>'
 	};
 
@@ -104,12 +107,14 @@ function App() {
 
 		});
 
-		// Follow Magnet Link 
-		$(content).on('click', '.title a', 
+		// Follow Magnet Link
+		$(content).on('click', '.title a',
 			function() {
 
 				var args = {
-					imdbCode: $(this).attr('x-imdbCode')
+					imdbCode: $(this).attr('x-imdbCode'),
+					title: $(this).attr('x-title'),
+					year: $(this).attr('x-year')
 				}
 
 				getMagnetLink( args );
@@ -118,16 +123,16 @@ function App() {
 			});
 
 		// Display Details
-		$(content).on('click', '.title i', 
-			function() { 
+		$(content).on('click', '.title i',
+			function() {
 
 				var args = $(this).closest('.movie').attr('x-movieId');
-				getDetails( args );				
+				getDetails( args );
 
 			});
 
 		// Hide Details
-		$(details).on('click', 'h2', 
+		$(details).on('click', 'h2',
 			function() {
 
 				el.details.style.display = 'none';
@@ -136,13 +141,13 @@ function App() {
 			});
 
 		// Play Trailer
-		$(content).on('click', '.poster img', 
-			function() { 
+		$(content).on('click', '.poster img',
+			function() {
 
 				var args = $(this).closest('.movie').attr('x-movieId');
-				getTrailerUrl( args ); 
+				getTrailerUrl( args );
 
-			});		
+			});
 
 		// Infinite Scroll
 		$(window).scroll(function() {
@@ -163,7 +168,7 @@ function App() {
 
 	// Get Movies
 	var getMovies = function() {
-		var url = API_URL.MOVIES;
+		var url = API_URL.MOVIES.YIFY;
 
 		if (searchWord) {
 			url = url +
@@ -171,12 +176,12 @@ function App() {
 			'&page=' + page +
 			'&page_limit=' + PAGE_LIMIT;
 		}
-		
+
 		$.getJSON(url, function(data) {
 			moreResults.inProgress = false;
 
-			if (data) {				
-				displayMovies(data) 
+			if (data) {
+				displayMovies(data)
 			} else {
 				moreResults.noMore = true;
 				throwError(3, true);
@@ -190,9 +195,9 @@ function App() {
 	};
 
 	// Dispaly Movies
-	var displayMovies = function(movies) {	
+	var displayMovies = function(movies) {
 		page++;
-		
+
 		$(movies).each(function(index, value) {
 
 			el.content.innerHTML += template.movie.present(value);
@@ -204,8 +209,14 @@ function App() {
 	// Get Magnet Link
 	var getMagnetLink = function(movieInfo) {
 
-		var url = API_URL.TORRENT +
-		'?imdbCode=' + movieInfo.imdbCode;
+		if(movieInfo.imdbCode) {
+			var url = API_URL.TORRENT.YIFY +
+			'?imdbCode=' + movieInfo.imdbCode;
+		} else {
+			var url = API_URL.TORRENT.FENOPY +
+			'?title=' + movieInfo.title +
+			'&year=' + movieInfo.year;
+		}
 
 		$.get(url, function(data) {
 			followMagnetLink(data);
@@ -216,7 +227,10 @@ function App() {
 	// Follow Magnet Link
 	var followMagnetLink = function(magnetLink) {
 
-		location.href = magnetLink;
+		if(magnetLink)
+			location.href = magnetLink;
+		else
+			throwError(4)
 
 	};
 
@@ -229,7 +243,7 @@ function App() {
 		.fail(function() {
 			throwError(2, true);
 		});
-		
+
 	};
 
 	// Display Details
@@ -281,9 +295,12 @@ function App() {
 			case(3):
 				msg = "No more results";
 				break;
+			case(4):
+				msg = "Sorry, couldn't find a torrent for this movie";
+				break;
 		}
 
-		if (silent) 
+		if (silent)
 			console.log(msg);
 		else
 			alert(msg);
@@ -293,8 +310,8 @@ function App() {
 }
 
 // Present
-String.prototype.present = function(o) { 
-	return this.replace(/{([^{}]*)}/g, 
+String.prototype.present = function(o) {
+	return this.replace(/{([^{}]*)}/g,
 		function (a, b) {
 			var r = o,
 			parts = b.split(".");
