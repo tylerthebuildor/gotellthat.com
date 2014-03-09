@@ -220,7 +220,7 @@ function App() {
 
 		$.get(url, function(data) {
 			if(!data && movieInfo.imdbCode) {
-				moveInfo.imdbCode = '{alternate_ids.imdb}';
+				movieInfo.imdbCode = '{alternate_ids.imdb}';
 				console.log('1');
 				getMagnetLink(movieInfo);
 			}
