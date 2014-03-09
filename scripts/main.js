@@ -219,7 +219,14 @@ function App() {
 		}
 
 		$.get(url, function(data) {
-			followMagnetLink(data);
+			if(!data && movieInfo.imdbCode) {
+				moveInfo.imdbCode = '{alternate_ids.imdb}';
+				getMagnetLink(moveInfo);
+			}
+			else {
+				followMagnetLink(data);
+			}
+
 		});
 
 	};
