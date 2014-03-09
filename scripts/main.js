@@ -222,7 +222,7 @@ function App() {
 			if(!data && movieInfo.imdbCode) {
 				moveInfo.imdbCode = '{alternate_ids.imdb}';
 				console.log('1');
-				app.getMagnetLink(moveInfo);
+				getMagnetLink(movieInfo);
 			}
 			else {
 				console.log('2')
