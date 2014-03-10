@@ -151,17 +151,14 @@ function App() {
 
 		// Infinite Scroll
 		$(window).scroll(function() {
+			if($(window).scrollTop() + $(window).height() == $(document).height()) {
 
-			if (document.body.offsetHeight + document.body.scrollTop >= document.body.scrollHeight) {
-
-				if (moreResults.noMore == false && moreResults.inProgress == false && searchWord) {
+			  if (moreResults.noMore == false && moreResults.inProgress == false && searchWord) {
 					moreResults.inProgress = true;
 					getMovies();
 				}
 
-				//console.log('bottom reached: ' + new Date());
 			}
-
 		});
 
 	};
