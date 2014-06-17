@@ -45,6 +45,7 @@ angular.module('app.controllers', [])
 
 				$http.get($scope.API_URL.MOVIES)
 					.success(function(data) {
+						console.log(data);
 						$scope.moreResults.inProgress = false;
 
 						if(data) {
