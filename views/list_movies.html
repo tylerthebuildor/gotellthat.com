@@ -1,0 +1,68 @@
+<h3 tourtip="This is the navigation heading it tells you what genre of movies you are looking at.">
+New Releases
+</h3>
+
+<div class="content-grid">
+
+	<!-- Tour Version -->
+	<div class="movie" ng-repeat="movie in movies" ng-if="$index < 1 && !movie.cache">
+		<div class="title">
+			<a ng-class="movie | colorRating" tourtip="Click the title of any movie and we will fetch the highest quality torrent we can find. Movie titles are colored green, yellow, or red for quickly identifying their ratings based on critic and user review." ng-click="$parent.downloadTorrent(movie)">
+				{{movie.title}}
+			</a>
+			<i tourtip="Selecting the info icon will bring up a window with a barage of info about the movie."
+			ng-click="$parent.showDetails(movie.id)"></i>
+		</div>
+		<div class="poster">
+			<a ng-href="">
+				<img tourtip="Clicking on a movies poster lets you watch the trailer for that movie." ng-src="{{movie.posters.detailed}}" ng-click="$parent.viewTrailer(movie.id)"></img>
+			</a>
+		</div>
+	</div>
+
+	<!-- Default Version -->
+	<div class="movie" ng-repeat="movie in $parent.movies" ng-if="$index > 0 && !movie.cache">
+		<div class="title">
+			<a ng-class="movie | colorRating" ng-click="$parent.downloadTorrent(movie)">
+				{{movie.title}}
+			</a>
+			<i ng-click="$parent.showDetails(movie.id)"></i>
+		</div>
+		<div class="poster">
+			<a ng-href="">
+				<img ng-src="{{movie.posters.detailed}}" ng-click="$parent.viewTrailer(movie.id)"></img>
+			</a>
+		</div>
+	</div>
+
+	<!-- Tour Cached Version -->
+	<div class="movie" ng-repeat="movie in movies" ng-if="$index < 1 && movie.cache">
+		<div class="title" tourtip="Click the title of any movie and we will fetch the highest quality torrent we can find. Movie titles are colored green, yellow, or red for quickly identifying their ratings based on critic and user review.">
+			<a ng-class="movie | colorRating" ng-href="{{movie.cache.magnetLink}}" target="_blank">
+				{{movie.title}}
+			</a>
+			<i tourtip="Selecting the info icon will bring up a window with a barage of info about the movie."></i>
+		</div>
+		<div class="poster" tourtip="Clicking on a movies poster lets you watch the trailer for that movie.">
+			<a ng-href="{{movie.cache.trailerUrl}}" target="_blank">
+				<img ng-src="{{movie.posters.detailed}}"></img>
+			</a>
+		</div>
+	</div>
+
+	<!-- Default Cached Version -->
+	<div class="movie" ng-repeat="movie in $parent.movies" ng-if="$index > 0 && movie.cache">
+		<div class="title">
+			<a ng-class="movie | colorRating" ng-href="{{movie.cache.magnetLink}}" target="_blank">
+				{{movie.title}}
+			</a>
+			<i ng-click="$parent.showDetails(movie.id)"></i>
+		</div>
+		<div class="poster">
+			<a ng-href="{{movie.cache.trailerUrl}}" target="_blank">
+				<img ng-src="{{movie.posters.detailed}}"></img>
+			</a>
+		</div>
+	</div>
+
+</div>

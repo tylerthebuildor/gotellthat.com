@@ -1,0 +1,15 @@
+<h3>New Releases</h3>
+
+<div class="content-grid" infinite-scroll="myPagingFunction()" infinite-scroll-distance="3">
+	<div class="movie" x-movieId="{{id}}" ng-repeat="movie in movies">
+		<div class="title">
+			<a x-imdbCode="{{movie.alternate_ids.imdb}}" x-title="{{movie.title}}" x-year="{{movie.year}}" class="{{movie | colorRating}}">
+				{{movie.title}}
+			</a>
+			<i></i>
+		</div>
+		<div class="poster">
+			<img src="{{movie.posters.detailed}}"></img>
+		</div>
+	</div>
+</div>

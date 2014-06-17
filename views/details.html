@@ -1,0 +1,40 @@
+<div class="container">
+	<h2>X</h2>
+	<div class="movie" x-movieId="{{id}}">
+		<div class="title">
+			<a x-imdbCode="{{alternate_ids.imdb}}" x-title="{{title}}" x-year="{{year}}" class="{{rating-color}}">
+				{{title}}
+			</a>
+		</div>
+		<div class="poster">
+			<img src="{{posters.detailed}}"></img>
+		</div>
+	</div>
+
+	<h3>Synopsis</h3>
+	<p>{{synopsis}}</p>
+
+	<h3>Critics Consensus</h3>
+	<p>{{critics_consensus}}</p>
+
+	<div id="abridged_cast">
+		<h3>Actors</h3>
+	</div>
+
+	<h3>Ratings</h3>
+	<p>Audience: "{{ratings.audience_rating}}" {{ratings.audience_score}}/100</p>
+	<p>Critics: "{{ratings.critics_rating}}" {{ratings.critics_score}}/100</p>
+
+	<h3>Runtime</h3>
+	<p>{{runtime}} minutes</p>
+
+	<h3>Release Dates</h3>
+	<p>Theater: {{release_dates.theater}}</p>
+	<p>DVD: {{release_dates.dvd}}</p>
+
+	<h3>MPAA Rating</h3>
+	<p>{{mpaa_rating}}</p>
+
+	<h3>Link</h3>
+	<p><a href="{{links.alternate}}" target="_new">Rotten Tomatoes Page</a></p>
+</div>
