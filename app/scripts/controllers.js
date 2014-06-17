@@ -49,9 +49,8 @@ angular.module('app.controllers', [])
 						$scope.moreResults.inProgress = false;
 
 						if(data) {
-							console.log(data.movies);
-							$.each(data.movies, function(index) {
-								$scope.movies.push(data.movies[index]);
+							$.each(data, function(index) {
+								$scope.movies.push(data[index]);
 							});
 							$scope.page++;
 						} else {
