@@ -1,0 +1,683 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"a",
+				"auto"
+			],
+			[
+				"text",
+				"text-decoration"
+			]
+		]
+	},
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 53.0,
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"remove p",
+				"Package Control: Remove Package"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"package diso",
+				"Package Control: Discover Packages"
+			],
+			[
+				"package",
+				"Package Control: List Packages"
+			],
+			[
+				"",
+				"Package Control: Install Package"
+			],
+			[
+				"git",
+				"Package Control: Install Package"
+			],
+			[
+				"sass",
+				"Set Syntax: Sass"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"scss",
+				"Set Syntax: CSS"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"install pack",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 575.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/tylerbuchea/dev/assets/www/gotellthat.com/app/bower_components/ngInfiniteScroll/src/infinite-scroll.coffee",
+		"/Users/tylerbuchea/dev/assets/www/gotellthat.com/app/api/trailer.php",
+		"/Users/tylerbuchea/dev/assets/www/gotellthat.com/app/views/list_movies.html",
+		"/Users/tylerbuchea/dev/assets/www/gotellthat.com/app/scripts/directives.js",
+		"/Users/tylerbuchea/dev/assets/www/gotellthat.com/app/scripts/old.js",
+		"/Users/tylerbuchea/dev/assets/www/gotellthat.com/app/bower_components/angular-tour/dist/angular-tour.css",
+		"/Users/tylerbuchea/dev/assets/www/gotellthat.com/app/views/list_movies_default.html",
+		"/Users/tylerbuchea/dev/assets/www/gotellthat.com/app/scripts/filters.js",
+		"/Users/tylerbuchea/dev/assets/www/gotellthat.com/app/views/list_movies_tour.html",
+		"/Users/tylerbuchea/dev/assets/www/gotellthat.com/app/views/list_movies_old.html",
+		"/Users/tylerbuchea/dev/assets/www/gotellthat.com/app/bower_components/angular-tour/dist/angular-tour-tpls.js",
+		"/Users/tylerbuchea/dev/assets/www/gotellthat.com/app/bower_components/angular-tour/dist/angular-tour.js",
+		"/Users/tylerbuchea/dev/assets/www/gotellthat.com/app/bower_components/angular-loading-bar/src/loading-bar-light.css",
+		"/Users/tylerbuchea/dev/assets/www/gotellthat.com/app/bower_components/angular-loading-bar/src/loading-bar.css",
+		"/Users/tylerbuchea/dev/assets/www/gotellthat.com/bower.json",
+		"/Users/tylerbuchea/dev/assets/www/gotellthat.com/app/api/movies.php",
+		"/Users/tylerbuchea/dev/assets/www/gotellthat.com/app/views/details.html",
+		"/Users/tylerbuchea/dev/assets/www/gotellthat.com/app/api/details.php",
+		"/Users/tylerbuchea/dev/assets/www/gotellthat.com/app/api/details-real.php",
+		"/Users/tylerbuchea/dev/assets/www/gotellthat.com/app/api/movies-real.php",
+		"/Users/tylerbuchea/dev/assets/www/cammy/app/scripts/main.js",
+		"/Users/tylerbuchea/dev/assets/www/cammy/app/styles/main.scss",
+		"/Users/tylerbuchea/dev/assets/www/cammy/gulpfile.js",
+		"/Users/tylerbuchea/dev/assets/www/cammy/package.json",
+		"/Users/tylerbuchea/dev/assets/www/cammy/app/index.html",
+		"/Users/tylerbuchea/dev/assets/www/kinkykitty/app/bower_components/gallery-css/sass/_gallery.scss",
+		"/Users/tylerbuchea/dev/assets/www/guitary/app/styles/main.scss",
+		"/Users/tylerbuchea/dev/assets/www/guitary/app/index.html",
+		"/Users/tylerbuchea/dev/assets/www/guitary/app/scripts/main.js",
+		"/Users/tylerbuchea/dev/assets/www/guitary/app/bower_components/jquery/MIT-LICENSE.txt",
+		"/Users/tylerbuchea/dev/assets/www/guitary/app/bower_components/jquery/test/data/selector/sizzle_cache.html",
+		"/Users/tylerbuchea/dev/assets/www/guitary/app/bower_components/jquery/src/serialize.js",
+		"/Users/tylerbuchea/dev/assets/www/guitary/app/bower_components/modernizr/feature-detects/img-apng.js",
+		"/Users/tylerbuchea/dev/assets/www/guitary/.sass-cache/46059ac0ecf9a5a12b81052fa8f0165aff84733e/main.scssc",
+		"/Users/tylerbuchea/dev/assets/www/guitary/app/.htaccess",
+		"/Users/tylerbuchea/dev/assets/www/guitary/app/bower_components/jquery/test/data/params_html.php",
+		"/Users/tylerbuchea/dev/assets/www/guitary/app/bower_components/modernizr/feature-detects/battery-api.js",
+		"/Users/tylerbuchea/dev/assets/www/guitary/app/bower_components/jquery/AUTHORS.txt",
+		"/Users/tylerbuchea/dev/assets/www/guitary/.bowerrc",
+		"/Users/tylerbuchea/dev/assets/www/guitary/.jshintrc",
+		"/Users/tylerbuchea/dev/assets/www/guitary/app/bower_components/jquery/.jshintrc",
+		"/Users/tylerbuchea/dev/assets/www/guitary/app/styles/main.css",
+		"/Users/tylerbuchea/dev/assets/www/guitary/guitary.sublime-project",
+		"/Users/tylerbuchea/dev/assets/www/guitary/app/bower_components/ember/package.json",
+		"/Users/tylerbuchea/dev/assets/www/guitary/gulpfile.js",
+		"/Users/tylerbuchea/dev/assets/www/botique/app/styles/style.css",
+		"/Users/tylerbuchea/dev/assets/www/botique/app/index.html",
+		"/Users/tylerbuchea/dev/assets/www/botique/app/scripts/app.js",
+		"/Users/tylerbuchea/dev/assets/www/botique/app/api/index.php",
+		"/Users/tylerbuchea/dev/assets/www/botique/Broccoli.js",
+		"/Users/tylerbuchea/dev/assets/www/botique/app/api/.htaccess",
+		"/Users/tylerbuchea/dev/assets/www/botique/app/api/server.php",
+		"/Users/tylerbuchea/dev/assets/www/botique/app/components/ember/ember.js",
+		"/Users/tylerbuchea/dev/assets/www/botique/.gitattributes",
+		"/Users/tylerbuchea/dev/assets/www/botique/package.json",
+		"/Users/tylerbuchea/dev/assets/www/botique/bower.json",
+		"/Users/tylerbuchea/dev/assets/www/botique/.gitignore",
+		"/Users/tylerbuchea/dev/assets/www/botique/.bowerrc",
+		"/Users/tylerbuchea/dev/assets/www/botique/app/composer.phar",
+		"/Users/tylerbuchea/dev/assets/www/botique/app/composer.json",
+		"/Users/tylerbuchea/dev/assets/www/wedding/dist/scripts/vendor.js",
+		"/Users/tylerbuchea/dev/assets/www/wedding/dist/styles/main.css",
+		"/Users/tylerbuchea/dev/assets/www/wedding/dist/scripts/vendor/modernizr.js",
+		"/Users/tylerbuchea/dev/assets/www/wedding/app/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap.scss",
+		"/Users/tylerbuchea/dev/assets/www/wedding/dist/scripts/plugins.js",
+		"/Users/tylerbuchea/dev/assets/www/wedding/dist/scripts/main.js",
+		"/Users/tylerbuchea/dev/assets/www/wedding/package.json",
+		"/Users/tylerbuchea/dev/assets/www/wedding/gulpfile.js",
+		"/Users/tylerbuchea/dev/assets/www/wedding/dist/index.html",
+		"/Users/tylerbuchea/dev/assets/www/wedding/README.md",
+		"/Users/tylerbuchea/dev/assets/www/wedding/test/spec/test.js",
+		"/Users/tylerbuchea/dev/assets/www/wedding/app/bower_components/jquery/test/data/support/testElementCrash.html",
+		"/Users/tylerbuchea/dev/assets/www/wedding/test/.bowerrc",
+		"/Users/tylerbuchea/dev/assets/www/wedding/app/.htaccess",
+		"/Users/tylerbuchea/dev/assets/www/wedding/.bowerrc",
+		"/Users/tylerbuchea/dev/assets/www/wedding/app/styles/main.scss",
+		"/Users/tylerbuchea/dev/assets/www/wedding/app/scripts/main.js",
+		"/Users/tylerbuchea/dev/assets/www/wedding/app/bower_components/holderjs/README.md",
+		"/Users/tylerbuchea/dev/assets/www/wedding/app/bower_components/holderjs/holder.js",
+		"/Users/tylerbuchea/dev/assets/www/vanilla/app/scripts/main.js",
+		"/Users/tylerbuchea/dev/assets/www/vanilla/app/components/modernizr/feature-detects/window-framed.js",
+		"/Users/tylerbuchea/dev/assets/www/vanilla/app/index.html",
+		"/Users/tylerbuchea/dev/assets/www/vanilla/app/views/about.html",
+		"/Users/tylerbuchea/dev/assets/www/vanilla/app/views/submit.html",
+		"/Users/tylerbuchea/dev/assets/www/vanilla/app/views/gallery.html",
+		"/Users/tylerbuchea/dev/assets/www/vanilla/app/views/galleries.html",
+		"/Users/tylerbuchea/dev/assets/www/vanilla/app/views/create.html",
+		"/Users/tylerbuchea/dev/assets/www/vanilla/app/views/login.html",
+		"/Users/tylerbuchea/dev/assets/www/vanilla/app/styles/snap.css",
+		"/Users/tylerbuchea/dev/assets/www/vanilla/app/styles/font/SourceCodePro-Semibold.otf",
+		"/Users/tylerbuchea/dev/assets/www/vanilla/app/components/angular-snapjs/src/scripts/directives/snap-close.js",
+		"/Users/tylerbuchea/dev/assets/www/vanilla/app/styles/font/SourceCodePro-ExtraLight.otf",
+		"/Users/tylerbuchea/dev/assets/www/vanilla/server.js",
+		"/Users/tylerbuchea/dev/assets/www/vanilla/app/components/modernizr/feature-detects/css-objectfit.js",
+		"/Users/tylerbuchea/dev/assets/www/vanilla/app/scripts/controllers.js",
+		"/Users/tylerbuchea/dev/assets/www/vanilla/app/components/angular-route/README.md",
+		"/Users/tylerbuchea/dev/assets/www/vanilla/app/components/angular-route/angular-route.js",
+		"/Users/tylerbuchea/dev/assets/www/vanilla/app/components/angular-route/bower.json",
+		"/Users/tylerbuchea/dev/assets/www/vanilla/app/scripts/routes.js",
+		"/Users/tylerbuchea/dev/assets/www/vanilla/app/robots.txt",
+		"/Users/tylerbuchea/dev/assets/www/vanilla/README.md",
+		"/Users/tylerbuchea/dev/assets/www/vanilla/app/components/modernizr/feature-detects/quota-management-api.js",
+		"/Users/tylerbuchea/dev/assets/www/vanilla/.bowerrc",
+		"/Users/tylerbuchea/dev/assets/www/vanilla/.jshintrc",
+		"/Users/tylerbuchea/dev/assets/www/vanilla/vanilla.sublime-project",
+		"/Users/tylerbuchea/dev/assets/www/vanilla/app/styles/.sass-cache/e8ec37e3a38e354a01726bb2470be9e7cfd98a62/main.scssc",
+		"/Users/tylerbuchea/dev/assets/www/vanilla/app/components/modernizr/feature-detects/web-intents.js",
+		"/Users/tylerbuchea/dev/assets/www/vanilla/app/attic/Snap.js/demo/apps/ratchet/template.html",
+		"/Users/tylerbuchea/dev/assets/www/vanilla/app/attic/topcoat-0.6.0/font/SourceCodePro-ExtraLight.otf",
+		"/Users/tylerbuchea/dev/assets/www/vanilla/app/attic/topcoat-0.6.0/font/SourceSansPro-ExtraLight.otf",
+		"/Users/tylerbuchea/dev/assets/www/vanilla/app/components/modernizr/feature-detects/css-backgroundposition-shorthand.js",
+		"/Users/tylerbuchea/dev/assets/www/vanilla/app/attic/cardview/LICENSE",
+		"/Users/tylerbuchea/dev/assets/www/vanilla/app/styles/font/SourceSansPro-LightIt.otf",
+		"/Users/tylerbuchea/dev/assets/www/vanilla/app/attic/topcoat-0.6.0/img/hamburger_light.svg",
+		"/Users/tylerbuchea/dev/assets/www/vanilla/app/components/topcoat/demo/fonts/sourcesanspro-light-webfont.svg",
+		"/Users/tylerbuchea/dev/assets/www/vanilla/app/attic/topcoat-0.6.0/topcoat-desktop-light.html",
+		"/Users/tylerbuchea/dev/assets/www/vanilla/app/styles/main.css",
+		"/home/tylerbuchea/dev/assets/www/vanilla/app/views/create.html",
+		"/home/tylerbuchea/dev/assets/www/vanilla/app/views/login.html",
+		"/home/tylerbuchea/dev/assets/www/vanilla/app/views/submit.html",
+		"/home/tylerbuchea/dev/assets/www/vanilla/app/index.html",
+		"/home/tylerbuchea/.bashrc",
+		"/home/tylerbuchea/.dotfiles/.bash_aliases",
+		"/home/tylerbuchea/.bash_aliases",
+		"/home/tylerbuchea/.dotfiles/z/README",
+		"/home/tylerbuchea/dart.key",
+		"/home/tylerbuchea/dev/assets/www/vanilla/Gruntfile.js",
+		"/home/tylerbuchea/dev/assets/www/vanilla/app/scripts/app.js"
+	],
+	"find":
+	{
+		"height": 39.0
+	},
+	"find_in_files":
+	{
+		"height": 105.0,
+		"where_history":
+		[
+			"",
+			"/home/tylerbuchea/dev/assets/www/wedding/app/index.html",
+			"/home/tylerbuchea/dev/assets/www/quiz/app/index.html",
+			"/home/tylerbuchea/dev/assets/www/quiz/app/",
+			"index.html",
+			"",
+			"/home/tylerbuchea/dev/assets/www/quiz/app/,/home/tylerbuchea/dev/assets/www/quiz/angular.js",
+			"/home/tylerbuchea/dev/assets/www/quiz/app/"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"z-index:",
+			"i",
+			"rating-",
+			"-color",
+			"}\n",
+			"wrapper",
+			"#29e",
+			"#29d",
+			"#fff",
+			"#",
+			"#29d",
+			"#",
+			"#29d",
+			"color",
+			"background",
+			"detailed",
+			"a",
+			"#content",
+			"flex",
+			"$http.getJSON(API_URL.MOVIES)\n			.success(function(data) {\n				console.log(data);\n			})\n			.fail(function(error) {\n				console.log(error);\n			});",
+			">\n",
+			"template",
+			"}",
+			"{",
+			"' +",
+			",",
+			"Say",
+			"%20",
+			"export",
+			"container",
+			">\n",
+			"\n				</div>",
+			"'Snipcart'",
+			"data-src=\"holder.js/300x200\"",
+			"<p>...</p>",
+			"<p>...",
+			"<a href=\"#\" class=\"btn btn-primary\" role=\"button\">$100</a>",
+			">Button</a>",
+			" <a href=\"#\" class=\"btn btn-default\" role=\"button\">Button</a>",
+			"<p>...</p>",
+			"jquery",
+			"$",
+			".tmp",
+			"<!-- Row 1 -->\n            <div class=\"row\">\n\n						  <div class=\"col-sm-6 col-md-4\">\n						    <div class=\"thumbnail\">\n						      <img data-src=\"holder.js/300x200\" alt=\"...\">\n						      <div class=\"caption\">\n						        <h3>Thumbnail label</h3>\n						        <p>...</p>\n						        <p><a href=\"#\" class=\"btn btn-primary\" role=\"button\">Button</a> <a href=\"#\" class=\"btn btn-default\" role=\"button\">Button</a></p>\n						      </div>\n						    </div>\n						  </div>\n\n						  <div class=\"col-sm-6 col-md-4\">\n						    <div class=\"thumbnail\">\n						      <img data-src=\"holder.js/300x200\" alt=\"...\">\n						      <div class=\"caption\">\n						        <h3>Thumbnail label</h3>\n						        <p>...</p>\n						        <p><a href=\"#\" class=\"btn btn-primary\" role=\"button\">Button</a> <a href=\"#\" class=\"btn btn-default\" role=\"button\">Button</a></p>\n						      </div>\n						    </div>\n						  </div>\n\n						  <div class=\"col-sm-6 col-md-4\">\n						    <div class=\"thumbnail\">\n						      <img data-src=\"holder.js/300x200\" alt=\"...\">\n						      <div class=\"caption\">\n						        <h3>Thumbnail label</h3>\n						        <p>...</p>\n						        <p><a href=\"#\" class=\"btn btn-primary\" role=\"button\">Button</a> <a href=\"#\" class=\"btn btn-default\" role=\"button\">Button</a></p>\n						      </div>\n						    </div>\n						  </div>\n\n						  <div class=\"col-sm-6 col-md-4\">\n						    <div class=\"thumbnail\">\n						      <img data-src=\"holder.js/300x200\" alt=\"...\">\n						      <div class=\"caption\">\n						        <h3>Thumbnail label</h3>\n						        <p>...</p>\n						        <p><a href=\"#\" class=\"btn btn-primary\" role=\"button\">Button</a> <a href=\"#\" class=\"btn btn-default\" role=\"button\">Button</a></p>\n						      </div>\n						    </div>\n						  </div>\n\n						</div>",
+			"drawer",
+			"ng-CloseDrawer",
+			"ng-closedrawer",
+			"ng-close",
+			"height",
+			"height:100%",
+			"height: 100%",
+			"        <",
+			"]",
+			"z",
+			"bash",
+			"x-",
+			"x-backgr",
+			"info-box",
+			"App",
+			"192.168.1.172:3001",
+			"localhost",
+			"routeParamas",
+			"localhost",
+			"signin",
+			"localhost",
+			"');\n",
+			"response",
+			"request",
+			"\"> ",
+			"list",
+			"combine",
+			"watch",
+			"concurrent:",
+			".tmp'",
+			".tmp",
+			"join",
+			"concurrent:",
+			"currentRoute",
+			"font",
+			"}		",
+			"gedit",
+			"'",
+			"\"../",
+			"'..",
+			".php",
+			"background: red;",
+			"background",
+			";;",
+			"thisRoute",
+			"viewContainer",
+			"server",
+			"<p>\n				Head over to the <a href=\"#/controller\">Controller</a>\n				section to understand the final final letter of MVC.\n			</p>",
+			"usemin",
+			"<pre x-highlight>",
+			"<code class=\"javascript\">",
+			"'",
+			"h3",
+			"h3>\n",
+			"////...\n",
+			"h1",
+			"...",
+			".",
+			"...",
+			"watch",
+			"-",
+			"a href",
+			"margin",
+			"imagemin",
+			"coffee",
+			"cssmin",
+			"concat",
+			">\n",
+			"<h2>Lure.js</h2>",
+			"lure.js",
+			"MVC",
+			"lurejs",
+			"h3",
+			"h3\n\n",
+			"h3",
+			"em",
+			"h3>",
+			"templates",
+			"command",
+			"switch",
+			"f1",
+			"tab",
+			"next",
+			"of your "
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"#29d",
+			"#fff",
+			"#29e",
+			"#fff",
+			"}}",
+			"{{",
+			"",
+			"^",
+			"src=\"images/pasted-image-small-18.png\"",
+			"",
+			"<p>&nbsp;",
+			"<p>",
+			"<a href=\"#\" role=\"button\" class=\"btn btn-primary snipcart-add-item\"\n								    data-item-id=\"2\"\n								    data-item-name=\"Bacon\"\n								    data-item-price=\"3.00\"\n								    data-item-weight=\"20\"\n								    data-item-url=\"http://tylerbuchea.com/\"\n								    data-item-description=\"Some fresh bacon\">$100</a>",
+			">$100</a>",
+			"",
+			"ng-",
+			"app",
+			"'+SERVER+'",
+			"192.168.1.172",
+			"127.0.0.1",
+			"login",
+			"192.168.1.172",
+			"res",
+			"req",
+			"\"",
+			"\"./",
+			"\"",
+			"",
+			"<pre x-highlight class=\"javascript\">",
+			"<code>",
+			"\"",
+			"h2",
+			"h2>",
+			"//...",
+			"*",
+			"<h2>lure.js</h2>",
+			"Lure.js",
+			"lure.js",
+			"em",
+			"h3",
+			"em>",
+			"for your ",
+			".controller",
+			"x-",
+			".templateUrl",
+			"\\n\\n",
+			"App.",
+			"App",
+			"h1>",
+			"h3>",
+			"/dist",
+			"",
+			"body",
+			"ul-fluid",
+			"'",
+			"\"",
+			"@include border-radius(",
+			"$neutral",
+			"$light",
+			"$mid",
+			"$dark",
+			"$blue",
+			"a",
+			"nav",
+			"\"",
+			"",
+			"~"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"incremental_find":
+	{
+		"height": 39.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 118.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"replace":
+	{
+		"height": 72.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"main.js",
+				"app/scripts/main.js"
+			],
+			[
+				"scss",
+				"app/styles/main.scss"
+			],
+			[
+				"inde",
+				"app/index.html"
+			],
+			[
+				"app/sc",
+				"app/scripts/main.js"
+			],
+			[
+				"",
+				".gitattributes"
+			],
+			[
+				"server",
+				"server.js"
+			],
+			[
+				"main.sc",
+				"app/styles/main.scss"
+			],
+			[
+				"rout",
+				"app/scripts/routes.js"
+			],
+			[
+				"contr",
+				"app/scripts/controllers.js"
+			],
+			[
+				"main",
+				"app/scripts/main.js"
+			],
+			[
+				"ind",
+				"app/index.html"
+			],
+			[
+				"serv",
+				"server.js"
+			],
+			[
+				"con",
+				"app/scripts/controllers.js"
+			],
+			[
+				"rou",
+				"app/scripts/routes.js"
+			],
+			[
+				"index",
+				"app/index.html"
+			],
+			[
+				"cont",
+				"app/scripts/controllers.js"
+			],
+			[
+				"s",
+				"server.js"
+			],
+			[
+				"route",
+				"app/scripts/routes.js"
+			],
+			[
+				".scss",
+				"app/styles/main.scss"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"e",
+				"~/dev/assets/www/eroticbay/eroticbay.sublime-project"
+			],
+			[
+				"",
+				"~/dev/assets/www/eroticbay/eroticbay.sublime-project"
+			],
+			[
+				"er",
+				"~/dev/assets/www/eroticbay/eroticbay.sublime-project"
+			],
+			[
+				"ero",
+				"~/dev/assets/www/eroticbay/eroticbay.sublime-project"
+			],
+			[
+				"guit",
+				"~/dev/assets/www/guitary/guitary.sublime-project"
+			],
+			[
+				"guita",
+				"~/dev/assets/www/guitary/guitary.sublime-project"
+			],
+			[
+				"go",
+				"~/dev/assets/www/gotellthat.com/gotellthat.sublime-workspace"
+			],
+			[
+				"eroti",
+				"~/dev/assets/www/eroticbay/eroticbay.sublime-project"
+			],
+			[
+				"botiqu",
+				"~/dev/assets/www/botique/botique.sublime-project"
+			],
+			[
+				"vanilla",
+				"~/dev/assets/www/vanilla/vanilla.sublime-project"
+			],
+			[
+				"vanill",
+				"~/dev/assets/www/vanilla/vanilla.sublime-project"
+			],
+			[
+				"goldman",
+				"/home/tylerbuchea/dev/assets/www/goldmansachs/goldmansachs.sublime-project"
+			],
+			[
+				"got",
+				"/home/tylerbuchea/dev/assets/www/gotellthat.com/gotellthat.sublime-project"
+			],
+			[
+				"tylerbuchea.com",
+				"/home/tylerbuchea/dev/assets/www/tylerbuchea.com/tylerbuchea.com.sublime-project"
+			],
+			[
+				"lure.js",
+				"/home/tylerbuchea/dev/assets/www/lure.js/lure.sublime-project"
+			],
+			[
+				"tylerbuchea",
+				"/home/tylerbuchea/dev/assets/www/polymer/polymer.sublime-project"
+			],
+			[
+				"lure",
+				"/home/tylerbuchea/dev/assets/www/lure.js/lure.sublime-project"
+			],
+			[
+				"tbuchea",
+				"/home/tylerbuchea/dev/assets/www/tbuchea/tbuchea.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 233.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
