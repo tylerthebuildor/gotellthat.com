@@ -5,15 +5,16 @@ angular.module('app.controllers', [])
 	.controller('MainCtrl', function($scope, $http, $location) {
 
 		// Constants
-		$scope.ROOT_URL = 'www.gotellthat.com'; //change this to your own url
+		var test = '';
+		$scope.ROOT_URL = test ? 'localhost:8000' : 'www.gotellthat.com'; //change this to your own url
 		$scope.API_URL = {
-			MOVIES: 'http://'+$scope.ROOT_URL+'/api/movies.php',
+			MOVIES: 'http://'+$scope.ROOT_URL+'/api/'+test+'movies.php',
 			TORRENT: {
-				YIFY: 'http://'+$scope.ROOT_URL+'/api/torrent-yify.php',
-				FENOPY: 'http://'+$scope.ROOT_URL+'/api/torrent-fenopy.php'
+				YIFY: 'http://'+$scope.ROOT_URL+'/api/'+test+'torrent-yify.php',
+				FENOPY: 'http://'+$scope.ROOT_URL+'/api/'+test+'torrent-fenopy.php'
 			},
-			DETAILS: 'http://'+$scope.ROOT_URL+'/api/details.php?movieId=',
-			TRAILER: 'http://'+$scope.ROOT_URL+'/api/trailer.php?movieId='
+			DETAILS: 'http://'+$scope.ROOT_URL+'/api/'+test+'details.php?movieId=',
+			TRAILER: 'http://'+$scope.ROOT_URL+'/api/'+test+'trailer.php?movieId='
 		};
 
 		// Globals
@@ -28,8 +29,16 @@ angular.module('app.controllers', [])
 		};
 		$scope.resetGlobals();
 
+		// Log Globals
+		$scope.logGlobals = function() {
+			console.log('page: ' + $scope.page);
+			console.log('search word: ' + $scope.searchWord);
+			console.log($scope.moreResults);
+		};
+
 		// Search
 		$scope.search = function() {
+			this.resetGlobals();
 			if(this.searchWord === '') {
 				$location.path('/new/all');
 			}
@@ -40,10 +49,20 @@ angular.module('app.controllers', [])
 
 		// List Movies
 		$scope.listMovies = function() {
+			this.logGlobals();
 			if ($scope.moreResults.noMore === false && $scope.moreResults.inProgress === false) {
 				$scope.moreResults.inProgress = true;
 
-				$http.get($scope.API_URL.MOVIES)
+				var url = $scope.API_URL.MOVIES;
+
+				if ($scope.searchWord) {
+					url = url +
+					'?q=' + $scope.searchWord +
+					'&page=' + $scope.page +
+					'&page_limit=' + $scope.PAGE_LIMIT;
+				}
+
+				$http.get(url)
 					.success(function(data) {
 						console.log(data);
 						$scope.moreResults.inProgress = false;
@@ -134,7 +153,7 @@ angular.module('app.controllers', [])
 	})
 
 	.controller('ListMoviesCtrl', function($scope, $routeParams) {
-		$scope.$parent.searchWord = $routeParams.searchWord || '';
 		$scope.$parent.resetGlobals();
+		$scope.$parent.searchWord = $routeParams.searchWord || '';
 		$scope.$parent.listMovies();
 	});
