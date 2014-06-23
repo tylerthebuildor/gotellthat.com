@@ -18,6 +18,10 @@ function findMovies()
 	}
 	else
 	{
+		if( intval($_GET['page']) > 1 )
+		{
+			return null;
+		}
 		$url = 'http://api.rottentomatoes.com/api/public/v1.0/lists/dvds/new_releases.json?apikey='.$APIKEY;
 		// return cached new releases
 	}

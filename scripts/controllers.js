@@ -53,13 +53,13 @@ angular.module('app.controllers', [])
 			if ($scope.moreResults.noMore === false && $scope.moreResults.inProgress === false) {
 				$scope.moreResults.inProgress = true;
 
-				var url = $scope.API_URL.MOVIES;
+				var url = $scope.API_URL.MOVIES +
+				'?page=' + $scope.page +
+				'&page_limit=' + $scope.PAGE_LIMIT;
 
 				if ($scope.searchWord) {
 					url = url +
-					'?q=' + $scope.searchWord +
-					'&page=' + $scope.page +
-					'&page_limit=' + $scope.PAGE_LIMIT;
+					'&q=' + $scope.searchWord;
 				}
 
 				$http.get(url)
