@@ -106,7 +106,7 @@ angular.module('app.controllers', [])
 						this.downloadTorrent(movieInfo);
 					}
 					else {
-						location.href = magnetLink;
+						location.href = data;
 					}
 				})
 				.error(function(error) {
