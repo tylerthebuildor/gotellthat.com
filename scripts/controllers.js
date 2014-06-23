@@ -62,6 +62,7 @@ angular.module('app.controllers', [])
 					'&q=' + $scope.searchWord;
 				}
 
+				console.log(url);
 				$http.get(url)
 					.success(function(data) {
 						console.log(data);

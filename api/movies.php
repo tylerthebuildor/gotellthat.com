@@ -22,7 +22,10 @@ function findMovies()
 		{
 			return null;
 		}
-		$url = 'http://api.rottentomatoes.com/api/public/v1.0/lists/dvds/new_releases.json?apikey='.$APIKEY;
+		else
+		{
+			$url = 'http://api.rottentomatoes.com/api/public/v1.0/lists/dvds/new_releases.json?apikey='.$APIKEY;
+		}
 		// return cached new releases
 	}
 
