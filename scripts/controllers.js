@@ -16,6 +16,7 @@ angular.module('app.controllers', [])
 			DETAILS: 'http://'+$scope.ROOT_URL+'/api/'+test+'details.php?movieId=',
 			TRAILER: 'http://'+$scope.ROOT_URL+'/api/'+test+'trailer.php?movieId='
 		};
+		$scope.PAGE_LIMIT = 10;
 
 		// Globals
 		$scope.resetGlobals = function() {
