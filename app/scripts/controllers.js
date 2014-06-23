@@ -125,7 +125,7 @@ angular.module('app.controllers', [])
 					console.log(data);
 					//playTrailer(data);
 				})
-				.fail(function(error) {
+				.error(function(error) {
 					console.log(error);
 				});
 		};
