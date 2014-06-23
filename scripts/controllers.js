@@ -5,7 +5,7 @@ angular.module('app.controllers', [])
 	.controller('MainCtrl', function($scope, $http, $location, $window) {
 
 		// Constants
-		var test = '';
+		var test = 'cache/'; // 'cache/'
 		$scope.ROOT_URL = test ? 'localhost:8000' : 'www.gotellthat.com'; //change this to your own url
 		$scope.API_URL = {
 			MOVIES: 'http://'+$scope.ROOT_URL+'/api/'+test+'movies.php',
@@ -17,6 +17,7 @@ angular.module('app.controllers', [])
 			TRAILER: 'http://'+$scope.ROOT_URL+'/api/'+test+'trailer.php?movieId='
 		};
 		$scope.PAGE_LIMIT = 10;
+		$scope.heading = $scope.heading || '';
 
 		// Globals
 		$scope.resetGlobals = function() {
@@ -50,7 +51,6 @@ angular.module('app.controllers', [])
 
 		// List Movies
 		$scope.listMovies = function() {
-			this.logGlobals();
 			if ($scope.moreResults.noMore === false && $scope.moreResults.inProgress === false) {
 				$scope.moreResults.inProgress = true;
 
@@ -63,7 +63,6 @@ angular.module('app.controllers', [])
 					'&q=' + $scope.searchWord;
 				}
 
-				console.log(url);
 				$http.get(url)
 					.success(function(data) {
 						console.log(data);
@@ -87,9 +86,6 @@ angular.module('app.controllers', [])
 
 		// Download Torrent
 		$scope.downloadTorrent = function(movieInfo) {
-			console.log('downloadTorrent');
-			console.log(movieInfo);
-
 			var url = '';
 
 			if(movieInfo.alternate_ids.imdbCode) {
@@ -119,9 +115,6 @@ angular.module('app.controllers', [])
 
 		// View Trailer
 		$scope.viewTrailer = function(movieId) {
-			console.log('viewTrailer');
-			console.log(movieId);
-
 			$http.get($scope.API_URL.TRAILER + movieId)
 				.success(function(data) {
 					$window.open(data);
@@ -154,6 +147,13 @@ angular.module('app.controllers', [])
 	})
 
 	.controller('ListMoviesCtrl', function($scope, $routeParams) {
+		if($routeParams.searchWord) {
+			$scope.$parent.heading = 'Search: ' + $routeParams.searchWord;
+		}
+		if($routeParams.genre) {
+			$scope.$parent.heading = 'New Releases: ' + $routeParams.genre;
+		}
+
 		$scope.$parent.resetGlobals();
 		$scope.$parent.searchWord = $routeParams.searchWord || '';
 		$scope.$parent.listMovies();
