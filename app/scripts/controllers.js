@@ -122,8 +122,7 @@ angular.module('app.controllers', [])
 
 			$http.get($scope.API_URL.TRAILER + movieId)
 				.success(function(data) {
-					console.log(data);
-					//playTrailer(data);
+					$window.open(data);
 				})
 				.error(function(error) {
 					console.log(error);
