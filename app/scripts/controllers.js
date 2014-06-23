@@ -5,7 +5,7 @@ angular.module('app.controllers', [])
 	.controller('MainCtrl', function($scope, $http, $location, $window) {
 
 		// Constants
-		var test = 'cache/'; // 'cache/'
+		var test = ''; // 'cache/'
 		$scope.ROOT_URL = test ? 'localhost:8000' : 'www.gotellthat.com'; //change this to your own url
 		$scope.API_URL = {
 			MOVIES: 'http://'+$scope.ROOT_URL+'/api/'+test+'movies.php',
