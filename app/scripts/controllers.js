@@ -2,7 +2,7 @@
 
 angular.module('app.controllers', [])
 
-	.controller('MainCtrl', function($scope, $http, $location) {
+	.controller('MainCtrl', function($scope, $http, $location, $window) {
 
 		// Constants
 		var test = '';
