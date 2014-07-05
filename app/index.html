@@ -38,7 +38,10 @@
 
 		<!-- Header -->
 		<header class="toolbar">
-			<input type="text" placeholder="Search..." tourtip="Use the search bar to find movies that aren't in predefined categories" tourtip-placement="bottom" ng-change="search()" ng-model="searchWord" />
+			<form class="search-wrapper cf" ng-submit="search()">
+	        <input type="text" equired="" placeholder="Search..." tourtip="Use the search bar to find movies that aren't in predefined categories" tourtip-placement="bottom" ng-model="$parent.searchWord">
+	        <button type="submit">Search</button>
+	    </form>
 		</header>
 
 		<!-- Tour Section -->
@@ -52,13 +55,13 @@
 	</div>
 
 	<!-- Vendor Scripts -->
-	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-	<script src="bower_components/angular/angular.min.js" type="text/javascript"></script>
-	<script src="bower_components/angular-route/angular-route.min.js" type="text/javascript"></script>
-	<script src="bower_components/angular-animate/angular-animate.min.js" type="text/javascript"></script>
-	<script src="bower_components/angular-loading-bar/build/loading-bar.min.js" type="text/javascript"></script>
-	<script src="bower_components/angular-tour/dist/angular-tour-tpls.min.js" type="text/javascript"></script>
-	<script type='text/javascript' src='bower_components/ngInfiniteScroll/build/ng-infinite-scroll.min.js'></script>
+	<script src="http://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
+	<script src="bower_components/angular/angular.js" type="text/javascript"></script>
+	<script src="bower_components/angular-route/angular-route.js" type="text/javascript"></script>
+	<script src="bower_components/angular-animate/angular-animate.js" type="text/javascript"></script>
+	<script src="bower_components/angular-loading-bar/build/loading-bar.js" type="text/javascript"></script>
+	<script src="bower_components/angular-tour/dist/angular-tour-tpls.js" type="text/javascript"></script>
+	<script type='text/javascript' src='bower_components/ngInfiniteScroll/build/ng-infinite-scroll.js'></script>
 
 	<!-- Main Scripts -->
 	<script src="scripts/app.js" type="text/javascript"></script>
