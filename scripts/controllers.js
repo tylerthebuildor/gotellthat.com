@@ -161,10 +161,12 @@ angular.module('app.controllers', [])
 	})
 
 	.controller('DetailsCtrl', function($scope, $routeParams, $http) {
-		var url = $scope.$parent.API_URL.Details + $routeParams.movieId;
+		var url = $scope.$parent.API_URL.DETAILS + $routeParams.movieId;
 
 		$http.get(url)
 			.success(function(data) {
+				console.log(url);
+				console.log(data);
 				$scope = data;
 			})
 			.error(function(error) {
