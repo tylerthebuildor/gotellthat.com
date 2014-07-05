@@ -70,10 +70,10 @@ angular.module('app.controllers', [])
 						$scope.moreResults.inProgress = false;
 
 						if(data) {
+							$scope.page++;
 							$.each(data, function(index) {
 								$scope.movies.push(data[index]);
 							});
-							$scope.page++;
 						} else {
 							$scope.moreResults.noMore = true;
 						}
