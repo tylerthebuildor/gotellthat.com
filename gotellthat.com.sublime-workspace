@@ -13,49 +13,6 @@
 			]
 		]
 	},
-	"buffers":
-	[
-		{
-			"file": "app/index.html",
-			"settings":
-			{
-				"buffer_size": 3215,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/scripts/controllers.js",
-			"settings":
-			{
-				"buffer_size": 3319,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/api/.apikey",
-			"settings":
-			{
-				"buffer_size": 24,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/list_movies.html",
-			"settings":
-			{
-				"buffer_size": 2792,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/scripts/app.js",
-			"settings":
-			{
-				"buffer_size": 732,
-				"line_ending": "Windows"
-			}
-		}
-	],
 	"build_system": "",
 	"command_palette":
 	{
@@ -133,11 +90,14 @@
 	},
 	"file_history":
 	[
-		"/Users/tylerbuchea/dev/assets/www/gotellthat.com/.gitignore",
-		"/Users/tylerbuchea/dev/assets/www/gotellthat.com/app/api/details-cached.php",
-		"/Users/tylerbuchea/dev/assets/www/gotellthat.com/app/api/movies.php",
-		"/Users/tylerbuchea/dev/assets/www/gotellthat.com/app/api/trailer.php",
+		"/Volumes/untitled 1/info.txt",
 		"/Users/tylerbuchea/dev/assets/www/gotellthat.com/app/scripts/old.js",
+		"/Users/tylerbuchea/dev/assets/www/gotellthat.com/app/api/cache/movies.php",
+		"/Users/tylerbuchea/dev/assets/www/gotellthat.com/app/api/movies.php",
+		"/Users/tylerbuchea/dev/assets/www/gotellthat.com/app/api/.apikey",
+		"/Users/tylerbuchea/dev/assets/www/gotellthat.com/app/api/details-cached.php",
+		"/Users/tylerbuchea/dev/assets/www/gotellthat.com/.gitignore",
+		"/Users/tylerbuchea/dev/assets/www/gotellthat.com/app/api/trailer.php",
 		"/Users/tylerbuchea/dev/assets/www/gotellthat.com/app/api/torrent-fenopy.php",
 		"/Users/tylerbuchea/dev/assets/www/gotellthat.com/app/api/torrent-yify.php",
 		"/Users/tylerbuchea/dev/assets/www/gotellthat.com/app/views/details.html",
@@ -257,10 +217,7 @@
 		"/home/tylerbuchea/dev/assets/www/vanilla/app/views/create.html",
 		"/home/tylerbuchea/dev/assets/www/vanilla/app/views/login.html",
 		"/home/tylerbuchea/dev/assets/www/vanilla/app/views/submit.html",
-		"/home/tylerbuchea/dev/assets/www/vanilla/app/index.html",
-		"/home/tylerbuchea/.bashrc",
-		"/home/tylerbuchea/.dotfiles/.bash_aliases",
-		"/home/tylerbuchea/.bash_aliases"
+		"/home/tylerbuchea/dev/assets/www/vanilla/app/index.html"
 	],
 	"find":
 	{
@@ -286,6 +243,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"console",
+			"magnetLink",
+			"data.movies",
 			"this.",
 			"$scope",
 			"ng",
@@ -410,10 +370,7 @@
 			"h3",
 			"h3\n\n",
 			"h3",
-			"em",
-			"h3>",
-			"templates",
-			"command"
+			"em"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -496,155 +453,6 @@
 		"whole_word": false,
 		"wrap": true
 	},
-	"groups":
-	[
-		{
-			"selected": 1,
-			"sheets":
-			[
-				{
-					"buffer": 0,
-					"file": "app/index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3215,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1109,
-								1109
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 438.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/scripts/controllers.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3319,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								317,
-								317
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/api/.apikey",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 24,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								24
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "app/views/list_movies.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2792,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1896,
-								1896
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app/scripts/app.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 732,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								267,
-								267
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				}
-			]
-		}
-	],
 	"incremental_find":
 	{
 		"height": 39.0
@@ -684,7 +492,6 @@
 	{
 		"height": 0.0
 	},
-	"project": "gotellthat.com.sublime-project",
 	"replace":
 	{
 		"height": 72.0
