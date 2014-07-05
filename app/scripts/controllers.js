@@ -1,20 +1,21 @@
 'use strict';
+var live = false;
 
 angular.module('app.controllers', [])
 
 	.controller('MainCtrl', function($scope, $http, $location, $window) {
 
 		// Constants
-		var test = ''; // 'cache/'
-		$scope.ROOT_URL = test ? 'localhost:8000' : 'www.gotellthat.com'; //change this to your own url
+		var api = live ? '/api/' : '/api/cache/';
+		$scope.ROOT_URL = live ? 'www.gotellthat.com' : 'localhost:8000';
 		$scope.API_URL = {
-			MOVIES: 'http://'+$scope.ROOT_URL+'/api/'+test+'movies.php',
+			MOVIES: 'http://' + $scope.ROOT_URL + api + 'movies.php',
 			TORRENT: {
-				YIFY: 'http://'+$scope.ROOT_URL+'/api/'+test+'torrent-yify.php',
-				FENOPY: 'http://'+$scope.ROOT_URL+'/api/'+test+'torrent-fenopy.php'
+				YIFY: 'http://' + $scope.ROOT_URL + api + 'torrent-yify.php',
+				FENOPY: 'http://' + $scope.ROOT_URL + api + 'torrent-fenopy.php'
 			},
-			DETAILS: 'http://'+$scope.ROOT_URL+'/api/'+test+'details.php?movieId=',
-			TRAILER: 'http://'+$scope.ROOT_URL+'/api/'+test+'trailer.php?movieId='
+			DETAILS: 'http://' + $scope.ROOT_URL + api + 'details.php?movieId=',
+			TRAILER: 'http://' + $scope.ROOT_URL + api + 'trailer.php?movieId='
 		};
 		$scope.PAGE_LIMIT = 10;
 		$scope.heading = $scope.heading || '';
@@ -125,19 +126,19 @@ angular.module('app.controllers', [])
 		};
 
 		// Show Details
-		$scope.showDetails = function(movieId) {
-			console.log('showDetails');
-			console.log(movieId);
+		// $scope.showDetails = function(movieId) {
+		// 	console.log('showDetails');
+		// 	console.log(movieId);
 
-			$http.get($scope.API_URL.DETAILS + movieId)
-				.success (function(data) {
-					console.log(data);
-					//displayDetails(data);
-				})
-				.error(function(error) {
-					console.log(error);
-				});
-		};
+		// 	$http.get($scope.API_URL.DETAILS + movieId)
+		// 		.success (function(data) {
+		// 			console.log(data);
+		// 			//displayDetails(data);
+		// 		})
+		// 		.error(function(error) {
+		// 			console.log(error);
+		// 		});
+		// };
 
 		// Next Page
 		$scope.nextPage = function() {
@@ -157,4 +158,17 @@ angular.module('app.controllers', [])
 		$scope.$parent.resetGlobals();
 		$scope.$parent.searchWord = $routeParams.searchWord || '';
 		$scope.$parent.listMovies();
+	})
+
+	.controller('DetailsCtrl', function($scope, $routeParams, $http) {
+		var url = $scope.$parent.API_URL.Details + $routeParams.movieId;
+
+		$http.get(url)
+			.success(function(data) {
+				$scope = data;
+			})
+			.error(function(error) {
+				console.log(error);
+			});
+
 	});

@@ -186,7 +186,7 @@ header input:focus {
     -moz-flex-flow: row wrap;
 }
 
-.title a {
+.title .link {
 	color: #444 !important;
 	cursor: pointer;
 	font-size: 1.25rem;
@@ -199,25 +199,24 @@ header input:focus {
 	-moz-flex: 9;
 }
 
-.title i {
+.title .details {
 	background: transparent url('../images/info.png') center center no-repeat;
 	background-size: contain;
 	cursor: pointer;
-
 	flex: 1;
 	-webkit-flex: 1;
 	-moz-flex: 1;
 }
 
-.title a.rating-red {
+.title .link.rating-red {
 	color: #c0392b !important;
 }
 
-.title a.rating-yellow {
+.title .link.rating-yellow {
 	color: #f39c12 !important;
 }
 
-.title a.rating-green {
+.title .link.rating-green {
 	color: #2abb67 !important;
 }
 
