@@ -1,5 +1,5 @@
 'use strict';
-var live = true;
+var live = false;
 
 angular.module('app.controllers', [])
 
@@ -125,25 +125,10 @@ angular.module('app.controllers', [])
 				});
 		};
 
-		// Show Details
-		// $scope.showDetails = function(movieId) {
-		// 	console.log('showDetails');
-		// 	console.log(movieId);
-
-		// 	$http.get($scope.API_URL.DETAILS + movieId)
-		// 		.success (function(data) {
-		// 			console.log(data);
-		// 			//displayDetails(data);
-		// 		})
-		// 		.error(function(error) {
-		// 			console.log(error);
-		// 		});
-		// };
-
 		// Next Page
-		$scope.nextPage = function() {
+		/*$scope.nextPage = function() {
 			this.listMovies();
-		};
+		};*/
 
 	})
 
@@ -162,12 +147,13 @@ angular.module('app.controllers', [])
 
 	.controller('DetailsCtrl', function($scope, $routeParams, $http) {
 		var url = $scope.$parent.API_URL.DETAILS + $routeParams.movieId;
+		console.log(url);
 
 		$http.get(url)
 			.success(function(data) {
 				console.log(url);
 				console.log(data);
-				$scope = data;
+				$scope.movie = data;
 			})
 			.error(function(error) {
 				console.log(error);

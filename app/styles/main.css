@@ -136,9 +136,14 @@ header input:focus {
 	font-family: 'Terminal Dosis',sans-serif;
 }
 
-#content {
+.content {
 	max-width: 1024px;
 	margin: auto;
+	padding: 20px;
+}
+
+#content .content h3 {
+	margin-left: 0;
 }
 
 .content-grid {

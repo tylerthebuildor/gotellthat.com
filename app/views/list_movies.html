@@ -10,7 +10,7 @@
 			<a ng-class="movie | colorRating" tourtip="Click the title of any movie and we will fetch the highest quality torrent we can find. Movie titles are colored green, yellow, or red for quickly identifying their ratings based on critic and user review." ng-click="$parent.downloadTorrent(movie)" class="link">
 				{{movie.title}}
 			</a>
-			<a ng-href="http://www.gotellthat.com/#!/details/{{movie.id}}" class="details" target="_blank" tourtip="Selecting the info icon will bring up a window with a barage of info about the movie."></a>
+			<a ng-href="http://www.gotellthat.com/#!/details/{{movie.id}}" class="details" tourtip="Selecting the info icon will bring up a window with a barage of info about the movie."></a>
 		</div>
 		<div class="poster">
 			<a ng-href="">
@@ -25,7 +25,7 @@
 			<a ng-class="movie | colorRating" ng-click="$parent.downloadTorrent(movie)" class="link">
 				{{movie.title}}
 			</a>
-			<a ng-href="http://www.gotellthat.com/#!/details/{{movie.id}}" class="details" target="_blank"></a>
+			<a ng-href="http://www.gotellthat.com/#!/details/{{movie.id}}" class="details"></a>
 		</div>
 		<div class="poster">
 			<a ng-href="">
@@ -40,7 +40,7 @@
 			<a ng-class="movie | colorRating" ng-href="{{movie.cache.magnetLink}}" class="link" target="_blank">
 				{{movie.title}}
 			</a>
-			<a ng-href="http://www.gotellthat.com/#!/details/{{movie.id}}" class="details" target="_blank" tourtip="Selecting the info icon will bring up a window with a barage of info about the movie."></a>
+			<a ng-href="http://www.gotellthat.com/#!/details/{{movie.id}}" class="details" tourtip="Selecting the info icon will bring up a window with a barage of info about the movie."></a>
 		</div>
 		<div class="poster" tourtip="Clicking on a movies poster lets you watch the trailer for that movie.">
 			<a ng-href="{{movie.cache.trailerUrl}}" target="_blank">
@@ -55,7 +55,7 @@
 			<a ng-class="movie | colorRating" ng-href="{{movie.cache.magnetLink}}" class="link" target="_blank">
 				{{movie.title}}
 			</a>
-			<a ng-href="http://www.gotellthat.com/#!/details/{{movie.id}}" class="details" target="_blank"></a>
+			<a ng-href="http://www.gotellthat.com/#!/details/{{movie.id}}" class="details"></a>
 		</div>
 		<div class="poster">
 			<a ng-href="{{movie.cache.trailerUrl}}" target="_blank">
