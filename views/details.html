@@ -1,53 +1,52 @@
 
 <!-- Container -->
-<div class="container">
-
-	<h1>Details!</h1>
+<div class="content-grid">
 
 	<!-- Tour Version -->
-	<div class="movie" ng-repeat="movie in movies" ng-if="$index < 1 && !movie.cache">
+	<div class="movie">
 		<div class="title">
-			<a ng-class="movie | colorRating" tourtip="Click the title of any movie and we will fetch the highest quality torrent we can find. Movie titles are colored green, yellow, or red for quickly identifying their ratings based on critic and user review." ng-click="$parent.downloadTorrent(movie)">
-				{{title}}
+			<a ng-class="movie | colorRating" tourtip="Click the title of any movie and we will fetch the highest quality torrent we can find. Movie titles are colored green, yellow, or red for quickly identifying their ratings based on critic and user review." ng-click="$parent.downloadTorrent(movie)" class="link">
+				{{movie.title}}
 			</a>
-			<i tourtip="Selecting the info icon will bring up a window with a barage of info about the movie."
-			ng-click="$parent.showDetails(movie.id)"></i>
 		</div>
 		<div class="poster">
 			<a ng-href="">
-				<img tourtip="Clicking on a movies poster lets you watch the trailer for that movie." ng-src="{{posters.detailed | detailedUrl}}" ng-click="$parent.viewTrailer(movie.id)"></img>
+				<img tourtip="Clicking on a movies poster lets you watch the trailer for that movie." ng-src="{{movie | detailedUrl}}" ng-click="$parent.viewTrailer(movie.id)"></img>
 			</a>
 		</div>
 	</div>
 
+</div>
+<div class="content">
+
 	<!-- Details -->
 	<h3>Synopsis</h3>
-	<p>{{synopsis}}</p>
+	<p>{{movie.synopsis}}</p>
 
 	<h3>Critics Consensus</h3>
-	<p>{{critics_consensus}}</p>
+	<p>{{movie.critics_consensus}}</p>
 
 	<div id="abridged_cast">
 		<h3>Actors</h3>
 		<ul>
-			<li></li> <!-- ng-repeat="actor in actors" -->
+			<li ng-repeat="actor in movie.abridged_cast">{{actor.name}}</li> <!-- ng-repeat="actor in actors" -->
 		</ul>
 	</div>
 
 	<h3>Ratings</h3>
-	<p>Audience: "{{ratings.audience_rating}}" {{ratings.audience_score}}/100</p>
-	<p>Critics: "{{ratings.critics_rating}}" {{ratings.critics_score}}/100</p>
+	<p>Audience: "{{movie.ratings.audience_rating}}" {{movie.ratings.audience_score}}/100</p>
+	<p>Critics: "{{movie.ratings.critics_rating}}" {{movie.ratings.critics_score}}/100</p>
 
 	<h3>Runtime</h3>
-	<p>{{runtime}} minutes</p>
+	<p>{{movie.runtime}} minutes</p>
 
 	<h3>Release Dates</h3>
-	<p>Theater: {{release_dates.theater}}</p>
-	<p>DVD: {{release_dates.dvd}}</p>
+	<p>Theater: {{movie.release_dates.theater}}</p>
+	<p>DVD: {{movie.release_dates.dvd}}</p>
 
 	<h3>MPAA Rating</h3>
-	<p>{{mpaa_rating}}</p>
+	<p>{{movie.mpaa_rating}}</p>
 
 	<h3>Link</h3>
-	<p><a href="{{links.alternate}}" target="_new">Rotten Tomatoes Page</a></p>
+	<p><a ng-href="{{movie.links.alternate}}" target="_new">Rotten Tomatoes Page</a></p>
 </div>
