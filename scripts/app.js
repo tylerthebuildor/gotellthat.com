@@ -24,6 +24,10 @@ angular.module('app', [
       	templateUrl: 'views/list_movies.html',
       	controller: 'ListMoviesCtrl'
       })
+      .when('details/:movieId', {
+      	templateUrl: 'views/details.html',
+      	controller: 'DetailsCtrl'
+      })
       .when('/404', {
       	templateUrl: '404.html'
       })
