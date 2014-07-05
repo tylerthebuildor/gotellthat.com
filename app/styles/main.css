@@ -91,26 +91,6 @@ header i {
 	background: #1563ca;
 }
 
-/*header input {
-	border: 2px solid #34495e;
-	border-radius: 5px;
-	font-size: 1rem;
-	height: 42px;
-	margin: auto;
-	max-width: 320px;
-	outline: 0;
-	padding: 0 40px 0 5px;
-	width: 70%;
-
-	flex: 1;
-	-webkit-flex: 1;
-	-moz-flex: 1;
-}*/
-
-/*header input:focus {
-	border-color: #88b7d5;
-}*/
-
 .tour {
 	display: block;
 	width: 100%;
@@ -149,9 +129,11 @@ header i {
 .content-grid {
   margin: 10px auto;
 
-	display: -flex;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
 	display: -webkit-flex;
-	display: -moz-flex;
+	display: flex;
     flex-flow: row wrap;
     -webkit-flex-flow: row wrap;
     -moz-flex-flow: row wrap;
@@ -183,9 +165,11 @@ header i {
 	width: -100%;
 	text-align: center;
 
-	display: -flex;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
 	display: -webkit-flex;
-	display: -moz-flex;
+	display: flex;
     flex-flow: row wrap;
     -webkit-flex-flow: row wrap;
     -moz-flex-flow: row wrap;
