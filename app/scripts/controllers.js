@@ -1,9 +1,9 @@
 'use strict';
-var live = true;
+var live = false;
 
 angular.module('app.controllers', [])
 
-	.controller('MainCtrl', function($scope, $http, $location, $window) {
+	.controller('MainCtrl', function($scope, $http, $location, $window, $cookies) {
 
 		// Constants
 		var api = live ? '/api/' : '/api/cache/';
@@ -133,6 +133,9 @@ angular.module('app.controllers', [])
 			}
 		};
 
+		// Tour
+		$scope.currentStep = $cookies.myTour || 0;
+
 	})
 
 	.controller('ListMoviesCtrl', function($scope, $routeParams) {
@@ -143,6 +146,7 @@ angular.module('app.controllers', [])
 			$scope.$parent.heading = 'New Releases: ' + $routeParams.genre;
 		}
 
+		$scope.$parent.searchWord = $scope.$parent.searchWord || '';
 		$scope.$parent.resetGlobals();
 		$scope.$parent.listMovies();
 	})
