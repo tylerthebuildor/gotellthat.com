@@ -1,5 +1,5 @@
 'use strict';
-var live = true;
+var live = false;
 
 angular.module('app.controllers', [])
 
@@ -141,7 +141,9 @@ angular.module('app.controllers', [])
 		}
 
 		$scope.$parent.resetGlobals();
-		$scope.$parent.listMovies();
+		// listMovies() is automatically fired because the infintite
+		// scroll function nextPage()
+		// is fired because of the initial small height of the container div.
 	})
 
 	.controller('DetailsCtrl', function($scope, $routeParams, $http) {
