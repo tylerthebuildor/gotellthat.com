@@ -8,7 +8,8 @@ angular.module('app', [
   'angular-tour',
   'infinite-scroll',
   'ngAnimate',
-  'ngRoute'
+  'ngRoute',
+  'ngCookies'
 ])
 	.config(function ($routeProvider, $locationProvider) {
 		$locationProvider.hashPrefix('!');
