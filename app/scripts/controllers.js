@@ -1,5 +1,5 @@
 'use strict';
-var live = true;
+var live = false;
 
 angular.module('app.controllers', [])
 
@@ -127,7 +127,10 @@ angular.module('app.controllers', [])
 
 		// Next Page
 		$scope.nextPage = function() {
-			this.listMovies();
+			if($scope.moreResults.noMore === false && $scope.moreResults.inProgress === false) {
+				console.log('bottom');
+				this.listMovies();
+			}
 		};
 
 	})
@@ -141,9 +144,7 @@ angular.module('app.controllers', [])
 		}
 
 		$scope.$parent.resetGlobals();
-		// listMovies() is automatically fired because the infintite
-		// scroll function nextPage()
-		// is fired because of the initial small height of the container div.
+		$scope.$parent.listMovies();
 	})
 
 	.controller('DetailsCtrl', function($scope, $routeParams, $http) {
