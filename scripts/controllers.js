@@ -1,5 +1,5 @@
 'use strict';
-var live = false;
+var live = true;
 
 angular.module('app.controllers', [])
 
