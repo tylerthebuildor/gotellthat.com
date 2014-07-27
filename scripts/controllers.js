@@ -3,7 +3,7 @@ var live = true;
 
 angular.module('app.controllers', [])
 
-	.controller('MainCtrl', function($scope, $http, $location, $window, $cookies) {
+	.controller('MainCtrl', function($scope, $http, $location, $window) {
 
 		// Constants
 		var api = live ? '/api/' : '/api/cache/';
@@ -134,7 +134,11 @@ angular.module('app.controllers', [])
 		};
 
 		// Tour
-		$scope.currentStep = $cookies.myTour || 0;
+		$scope.currentStep = -1;
+		$scope.initTour = function() {
+			$scope.currentStep = ($scope.currentStep === -1) ? 0 : $scope.currentStep;
+			$scope.startTour();
+		};
 
 	})
 
