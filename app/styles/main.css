@@ -210,8 +210,6 @@ header i {
 }
 
 .poster {
-	max-width: 300px;
-	max-height: 300px;
 	margin: auto;
 	text-align: center;
 }
@@ -220,6 +218,8 @@ header i {
 	border: 1px dashed #666;
 	cursor: pointer;
 	padding: 2px;
+	max-width: 300px;
+	max-height: 300px;
 }
 
 .tooltip {
