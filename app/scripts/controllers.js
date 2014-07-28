@@ -149,7 +149,7 @@ angular.module('app.controllers', [])
 			$scope.$parent.heading = 'New Releases: ' + $routeParams.genre;
 		}
 
-		$scope.$parent.searchWord = $scope.$parent.searchWord || '';
+		$scope.$parent.searchWord = $routeParams.searchWord || '';
 		$scope.$parent.resetGlobals();
 		$scope.$parent.listMovies();
 	})
