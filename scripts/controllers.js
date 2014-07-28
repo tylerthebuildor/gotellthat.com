@@ -6,16 +6,15 @@ angular.module('app.controllers', [])
 	.controller('MainCtrl', function($scope, $http, $location, $window) {
 
 		// Constants
-		var api = live ? '/api/' : '/api/cache/';
-		$scope.ROOT_URL = live ? 'www.gotellthat.com' : 'localhost:8000';
+		$scope.ROOT_URL = live ? 'http://www.gotellthat.com/api/' : 'localhost:8000/api/cache/';
 		$scope.API_URL = {
-			MOVIES: 'http://' + $scope.ROOT_URL + api + 'movies.php',
+			MOVIES: $scope.ROOT_URL + 'movies.php',
 			TORRENT: {
-				YIFY: 'http://' + $scope.ROOT_URL + api + 'torrent-yify.php',
-				FENOPY: 'http://' + $scope.ROOT_URL + api + 'torrent-fenopy.php'
+				YIFY: $scope.ROOT_URL + 'torrent-yify.php',
+				FENOPY: $scope.ROOT_URL + 'torrent-fenopy.php'
 			},
-			DETAILS: 'http://' + $scope.ROOT_URL + api + 'details.php?movieId=',
-			TRAILER: 'http://' + $scope.ROOT_URL + api + 'trailer.php?movieId='
+			DETAILS: $scope.ROOT_URL + 'details.php?movieId=',
+			TRAILER: $scope.ROOT_URL + 'trailer.php?movieId='
 		};
 		$scope.PAGE_LIMIT = 10;
 		$scope.heading = $scope.heading || '';
@@ -46,7 +45,7 @@ angular.module('app.controllers', [])
 				$location.path('/new/all');
 			}
 			else {
-				$location.path('/search/' + this.searchWord).replace();
+				$location.path('/search/' + this.searchWord);
 			}
 		};
 
