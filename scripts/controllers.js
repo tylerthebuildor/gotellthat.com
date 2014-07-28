@@ -89,9 +89,11 @@ angular.module('app.controllers', [])
 			var url = '';
 
 			if(movieInfo.alternate_ids.imdbCode) {
+				console.log('Trying YIFY');
 				url = $scope.API_URL.TORRENT.YIFY +
 				'?imdbCode=' + movieInfo.alternate_ids.imdbCode;
 			} else {
+				console.log('Trying Fenopy');
 				url = $scope.API_URL.TORRENT.FENOPY +
 				'?title=' + movieInfo.title +
 				'&year=' + movieInfo.year;
